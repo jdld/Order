@@ -32,4 +32,7 @@
 //根据URL下载图片并缓存
 + (UIImage *)imageUrl:(NSString *)url;
 
+//创建一张实时模糊效果 View (毛玻璃效果)
++ (UIVisualEffectView *)effectViewWithFrame:(CGRect)frame;
+
 @end
