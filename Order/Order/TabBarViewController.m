@@ -29,36 +29,36 @@
     UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:home];
     homeNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:[UIImage imageNamed:@"Home"] tag:0];
     homeNav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-    homeNav.tabBarItem.image = [[UIImage imageNamed:@"Home"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    homeNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Home"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    homeNav.tabBarItem.image = [[UIImage imageNamed:@"Home 1-1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    homeNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Home 1-2"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     DealsViewController *Deals = [Utilities getStoryboardInstanceByIdentity:@"Deals" byIdentity:@"Deals"];
     UINavigationController *DealsNav = [[UINavigationController alloc]initWithRootViewController:Deals];
     DealsNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:[UIImage imageNamed:@"Deals"] tag:1];
     DealsNav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-    DealsNav.tabBarItem.image = [[UIImage imageNamed:@"Deals"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    DealsNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Deals"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    DealsNav.tabBarItem.image = [[UIImage imageNamed:@"Deals 1-1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    DealsNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Deals 1-2"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     CenterViewController *Center = [Utilities getStoryboardInstanceByIdentity:@"Center" byIdentity:@"Center"];
     UINavigationController *CenterNav = [[UINavigationController alloc]initWithRootViewController:Center];
     CenterNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:[UIImage imageNamed:@"Center"] tag:2];
     CenterNav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-    CenterNav.tabBarItem.image = [[UIImage imageNamed:@"Center"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    CenterNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Center"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    CenterNav.tabBarItem.image = [[UIImage imageNamed:@"Center 1-1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    CenterNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Center 1-2"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     TagsViewController *Tags = [Utilities getStoryboardInstanceByIdentity:@"Tags" byIdentity:@"Tags"];
     UINavigationController *TagsNav = [[UINavigationController alloc]initWithRootViewController:Tags];
     TagsNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"Tags"] tag:3];
     TagsNav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-    TagsNav.tabBarItem.image = [[UIImage imageNamed:@"Tags"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    TagsNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Tags"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    TagsNav.tabBarItem.image = [[UIImage imageNamed:@"Tags 1-1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    TagsNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Tags 1-2"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     ProfileViewController *Profile = [Utilities getStoryboardInstanceByIdentity:@"Profile" byIdentity:@"Profile"];
     UINavigationController *ProfileNav = [[UINavigationController alloc]initWithRootViewController:Profile];
     ProfileNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"Profile"] tag:3];
     ProfileNav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-    ProfileNav.tabBarItem.image = [[UIImage imageNamed:@"Profile"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    ProfileNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Profile"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    ProfileNav.tabBarItem.image = [[UIImage imageNamed:@"Profile 1-1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    ProfileNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"Profile 1-2"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     _tabBarController.viewControllers = @[homeNav,DealsNav,CenterNav,TagsNav,ProfileNav];
     
@@ -66,6 +66,7 @@
     _tabBarController.tabBar.tintColor = [UIColor blueColor];
     [self.view addSubview:_tabBarController.view];
     
+    self.view.backgroundColor = [UIColor colorWithRed:248.f/255.f green:247.f/255.f blue:246.f/255.f alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {
