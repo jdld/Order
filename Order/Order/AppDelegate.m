@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "OtherViewController.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) OtherViewController *oVC;
 @end
 
 @implementation AppDelegate
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+//    [_window makeKeyAndVisible];
+//    [_window setRootViewController:_oVC];
     return YES;
 }
 
