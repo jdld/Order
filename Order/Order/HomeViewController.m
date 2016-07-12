@@ -27,7 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //UILabel *label =
     self.navigationItem.title = @"Home";
     NSDictionary *dict = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     [self.navigationController.navigationBar setTitleTextAttributes:dict];
@@ -52,7 +51,7 @@
 //滑动选项卡创建
 - (void)createSegmentedControl{
     
-    NSDictionary * dic2 = @{ NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName: [UIFont fontWithName:@"Marion-Regular" size:15.0f],};
+    NSDictionary * dic2 = @{ NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName: [UIFont fontWithName:@"Marion-Regular" size:13.0f],};
     NSArray *array = [[NSArray alloc]initWithObjects:@"Most Popular",@"Featured",@"Top Sellers",@"Following", nil];
     _segmentedControl2 = [[HMSegmentedControl alloc] initWithSectionTitles:array];
     _segmentedControl2.frame = CGRectMake(0, naviHeight, UI_SCREEN_W, 32);

@@ -35,4 +35,6 @@
 //创建一张实时模糊效果 View (毛玻璃效果)
 + (UIVisualEffectView *)effectViewWithFrame:(CGRect)frame;
 
+//设置TextField内容的左内边距
++ (void)setTextFieldLeftPadding:(UITextField *)textField forWidth:(CGFloat)leftWidth;
 @end

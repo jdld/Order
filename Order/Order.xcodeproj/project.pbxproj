@@ -37,6 +37,8 @@
 		B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */; };
 		B8BB2A351D2E501E0064ADE7 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BB2A341D2E501E0064ADE7 /* SignInViewController.m */; };
 		B8BB2A381D2E502B0064ADE7 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BB2A371D2E502B0064ADE7 /* SignUpViewController.m */; };
+		B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */; };
+		B8ED54E51D349BB8006FEA51 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,10 @@
 		B8BB2A341D2E501E0064ADE7 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		B8BB2A361D2E502B0064ADE7 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B8BB2A371D2E502B0064ADE7 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B8ED54E01D34787A006FEA51 /* PopularTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularTableViewCell.h; sourceTree = "<group>"; };
+		B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularTableViewCell.m; sourceTree = "<group>"; };
+		B8ED54E31D349BB8006FEA51 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		DD35A665C02B64F23C671F1D /* Pods-Order.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Order.release.xcconfig"; path = "Pods/Target Support Files/Pods-Order/Pods-Order.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,11 +286,10 @@
 		B82BE7621D2DE6F100AF7091 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B8ED54DF1D347861006FEA51 /* Popular */,
 				B82BE7A11D2E5A4500AF7091 /* Search */,
 				B82BE7631D2DE71200AF7091 /* HomeViewController.h */,
 				B82BE7641D2DE71200AF7091 /* HomeViewController.m */,
-				B82BE7951D2E58D400AF7091 /* PopularViewController.h */,
-				B82BE7961D2E58D400AF7091 /* PopularViewController.m */,
 				B82BE7981D2E58E600AF7091 /* FeaturedViewController.h */,
 				B82BE7991D2E58E600AF7091 /* FeaturedViewController.m */,
 				B82BE79B1D2E58F100AF7091 /* SellersViewController.h */,
@@ -368,8 +373,21 @@
 			children = (
 				B82BE7A21D2E5A5700AF7091 /* SearchViewController.h */,
 				B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */,
+				B8ED54E31D349BB8006FEA51 /* SearchTableViewCell.h */,
+				B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		B8ED54DF1D347861006FEA51 /* Popular */ = {
+			isa = PBXGroup;
+			children = (
+				B82BE7951D2E58D400AF7091 /* PopularViewController.h */,
+				B82BE7961D2E58D400AF7091 /* PopularViewController.m */,
+				B8ED54E01D34787A006FEA51 /* PopularTableViewCell.h */,
+				B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */,
+			);
+			name = Popular;
 			sourceTree = "<group>";
 		};
 		DA0E20A9D29C9AB2EBC249D1 /* Pods */ = {
@@ -571,11 +589,13 @@
 				B82BE7971D2E58D400AF7091 /* PopularViewController.m in Sources */,
 				B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */,
 				B82BE77F1D2DE91E00AF7091 /* StorageMgr.m in Sources */,
+				B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */,
 				B82BE71F1D2DE54400AF7091 /* AppDelegate.m in Sources */,
 				B82BE7881D2DF84200AF7091 /* OtherViewController.m in Sources */,
 				B82BE7751D2DE78700AF7091 /* CenterViewController.m in Sources */,
 				B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */,
 				B8BB2A351D2E501E0064ADE7 /* SignInViewController.m in Sources */,
+				B8ED54E51D349BB8006FEA51 /* SearchTableViewCell.m in Sources */,
 				B82BE7601D2DE6D900AF7091 /* TabBarViewController.m in Sources */,
 				B82BE7791D2DE90500AF7091 /* Utilities.m in Sources */,
 				B82BE71C1D2DE54400AF7091 /* main.m in Sources */,
