@@ -37,4 +37,7 @@
 
 //设置TextField内容的左内边距
 + (void)setTextFieldLeftPadding:(UITextField *)textField forWidth:(CGFloat)leftWidth;
+
+//计算文字在界面中的高度
++ (float)stringHeight:(NSString *)str width:(float)width forfontSize:(CGFloat)fontSize;
 @end

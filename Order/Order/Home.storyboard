@@ -88,15 +88,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImI-Jy-ueB">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YYP-fO-dqL">
-                                        <rect key="frame" x="20" y="8" width="289" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vt-b0-UYG">
                                         <rect key="frame" x="319" y="10" width="36" height="30"/>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendAction:forEvent:" destination="jpp-JF-ttq" eventType="touchUpInside" id="UwM-wv-Hzh"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your response..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6x-W7-ME2">
                                         <rect key="frame" x="20" y="15" width="111" height="20"/>
@@ -104,6 +101,15 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YYP-fO-dqL">
+                                        <rect key="frame" x="20" y="8" width="289" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jpp-JF-ttq" id="kCv-AF-nNK"/>
+                                        </connections>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -132,11 +138,18 @@
                             <constraint firstItem="ImI-Jy-ueB" firstAttribute="top" secondItem="rob-ff-9fA" secondAttribute="bottom" id="hCs-77-Mb9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="co4-01-03R"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backView" destination="ImI-Jy-ueB" id="4N1-Ah-crP"/>
+                        <outlet property="detialLab" destination="m6x-W7-ME2" id="g1x-af-Dzd"/>
+                        <outlet property="tableView" destination="rob-ff-9fA" id="fwb-dz-Xn7"/>
+                        <outlet property="textView" destination="YYP-fO-dqL" id="TAJ-Py-UHe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xrf-yn-lE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-182.5" y="421.5"/>
+            <point key="canvasLocation" x="629.5" y="421.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="V6I-cT-F0c">
@@ -155,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDR-ax-z3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="422"/>
+            <point key="canvasLocation" x="1045.5" y="421.5"/>
         </scene>
         <!--Detial View Controller-->
         <scene sceneID="NEL-dr-QpV">
@@ -249,14 +262,6 @@
                                     <constraint firstAttribute="width" secondItem="CPG-6Q-gB7" secondAttribute="height" multiplier="1:1" id="AGc-fX-GTh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-tr-KkY">
-                                <rect key="frame" x="20" y="502" width="158" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="U1m-JV-doE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="ASK A QUESTION"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQN-SE-l2r">
                                 <rect key="frame" x="198" y="502" width="157" height="50"/>
                                 <color key="backgroundColor" red="0.19607843137254902" green="0.47843137254901957" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
@@ -267,6 +272,20 @@
                                 <state key="normal" title="PURCHASE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="purchaseAction:forEvent:" destination="Lyp-WO-wxa" eventType="touchUpInside" id="RCs-20-F43"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-tr-KkY">
+                                <rect key="frame" x="20" y="502" width="158" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="U1m-JV-doE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="ASK A QUESTION"/>
+                                <connections>
+                                    <action selector="questionAction:forEvent:" destination="Lyp-WO-wxa" eventType="touchUpInside" id="Wxu-xe-gFL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -693,7 +712,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeX-U2-few" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631.5" y="421.5"/>
+            <point key="canvasLocation" x="1443.5" y="421.5"/>
         </scene>
         <!--Featured View Controller-->
         <scene sceneID="zB7-0X-Zok">
@@ -712,7 +731,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GY2-p9-f1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032.5" y="421.5"/>
+            <point key="canvasLocation" x="1844.5" y="421.5"/>
         </scene>
         <!--Sellers View Controller-->
         <scene sceneID="LLJ-vg-OPr">
@@ -731,7 +750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Hu-g6-5lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432.5" y="421.5"/>
+            <point key="canvasLocation" x="2244.5" y="421.5"/>
         </scene>
         <!--Following View Controller-->
         <scene sceneID="9nl-6Q-0PF">
@@ -750,7 +769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg5-YV-bQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831.5" y="421.5"/>
+            <point key="canvasLocation" x="2643.5" y="421.5"/>
         </scene>
     </scenes>
     <resources>

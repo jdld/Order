@@ -18,4 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *color4;
 @property (weak, nonatomic) IBOutlet UIView *color5;
 
+- (IBAction)questionAction:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)purchaseAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
 @end

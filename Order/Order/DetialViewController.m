@@ -7,6 +7,7 @@
 //
 
 #import "DetialViewController.h"
+#import "AskQuestionViewController.h"
 
 @interface DetialViewController (){
     CGSize size;
@@ -22,13 +23,14 @@
     // Do any additional setup after loading the view.
     _questionBut.layer.borderWidth = 1;
     _questionBut.layer.borderColor = [UIColor colorWithRed:50.f/255.f green:122.f/255.f blue:229.f/255.f alpha:1].CGColor;
-    _questionBut.layer.cornerRadius = 2;
-    _purchaseBut.layer.cornerRadius = 2;
+    _questionBut.layer.cornerRadius = 5;
+    _purchaseBut.layer.cornerRadius = 5;
     
     size = _color1.frame.size;
     
     self.title = @"Product Details";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backpop"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
     
     UITapGestureRecognizer*tapGesture1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(colorOne)];
     [_color1 addGestureRecognizer:tapGesture1];
@@ -44,6 +46,7 @@
     _check = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"checkmark"]];
     _check.contentMode = UIViewContentModeScaleAspectFit;
     _check.frame = CGRectMake(size.width/2 - 10, size.height/2 - 12, 20, 24);
+    [_color5 addSubview:_check];
     
 }
 
@@ -53,7 +56,6 @@
 }
 
 - (void)colorOne {
-    
     [_color1 addSubview:_check];
 }
 
@@ -73,6 +75,9 @@
     [_color5 addSubview:_check];
 }
 
+- (void) back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 
@@ -83,4 +88,12 @@
 }
 */
 
+- (IBAction)questionAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    AskQuestionViewController *AskQuestion = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"AskQuestion"];
+    
+    [self.navigationController pushViewController:AskQuestion animated:YES];
+}
+
+- (IBAction)purchaseAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
 @end
