@@ -132,5 +132,4 @@
     return stringSize.size.height;
 }
 
-
 @end
