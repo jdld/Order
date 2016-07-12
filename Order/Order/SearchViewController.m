@@ -8,6 +8,7 @@
 
 #import "SearchViewController.h"
 #import "SearchTableViewCell.h"
+#import "DetialViewController.h"
 
 @interface SearchViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UISearchBar *searchBar;
@@ -28,6 +29,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorStyle = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -116,6 +118,12 @@
 
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DetialViewController *Detial = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"Detial"];
+    [self.navigationController pushViewController:Detial animated:YES];
+}
+
 /*
 #pragma mark - Navigation
 

@@ -8,6 +8,7 @@
 
 #import "PopularViewController.h"
 #import "PopularTableViewCell.h"
+#import "HomeQuickViewController.h"
 
 @interface PopularViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -22,6 +23,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +51,12 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell start:3];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomeQuickViewController *HomeQuick = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"HomeQuick"];
+    //[[NSNotificationCenter defaultCenter]postNotificationName:@"quick" object:nil];
+    [self.navigationController pushViewController:HomeQuick animated:NO];
 }
 
 @end

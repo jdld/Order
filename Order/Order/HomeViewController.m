@@ -20,6 +20,8 @@
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (nonatomic, strong) HMSegmentedControl *segmentedControl2;
 
+@property (strong, nonnull) UIView *backView;
+
 @end
 
 @implementation HomeViewController
@@ -46,6 +48,11 @@
     [self.view addSubview:_scrollView];
     
     [self createSegmentedControl];
+    
+    _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H)];
+    _backView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showQuick) name:@"quick" object:nil];
 }
 
 //滑动选项卡创建
@@ -54,7 +61,7 @@
     NSDictionary * dic2 = @{ NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName: [UIFont fontWithName:@"Marion-Regular" size:13.0f],};
     NSArray *array = [[NSArray alloc]initWithObjects:@"Most Popular",@"Featured",@"Top Sellers",@"Following", nil];
     _segmentedControl2 = [[HMSegmentedControl alloc] initWithSectionTitles:array];
-    _segmentedControl2.frame = CGRectMake(0, naviHeight, UI_SCREEN_W, 32);
+    _segmentedControl2.frame = CGRectMake(0, 0, UI_SCREEN_W, 32);
     _segmentedControl2.selectionIndicatorHeight = 0;
     _segmentedControl2.backgroundColor = [UIColor clearColor];
     _segmentedControl2.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
@@ -116,6 +123,10 @@
     NSLog(@"search");
     SearchViewController *Search = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"Search"];
     [self.navigationController pushViewController:Search animated:YES];
+}
+
+- (void)showQuick {
+    //[self.view addSubview:_backView];
 }
 /*
  #pragma mark - Navigation
