@@ -45,8 +45,11 @@
 		B8C6E3391D34B8EE00E31B7F /* DealsOfTheMonthCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E3381D34B8EE00E31B7F /* DealsOfTheMonthCollectionViewController.m */; };
 		B8C6E33D1D34BE9700E31B7F /* MostPopularCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E33C1D34BE9700E31B7F /* MostPopularCollectionViewCell.m */; };
 		B8C6E3421D34BF9B00E31B7F /* MostPopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C6E3411D34BF9B00E31B7F /* MostPopularCollectionViewCell.xib */; };
-		B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */; };
-		B8ED54E51D349BB8006FEA51 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */; };
+		B8C6E3451D34E90700E31B7F /* CurrentOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E3441D34E90700E31B7F /* CurrentOrderTableViewController.m */; };
+		B8C6E3481D34E91800E31B7F /* PendingOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E3471D34E91800E31B7F /* PendingOrdersTableViewController.m */; };
+		B8C6E34B1D34E93900E31B7F /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E34A1D34E93900E31B7F /* HistoryTableViewController.m */; };
+		B8C6E3501D34EA7900E31B7F /* CurrentOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E34F1D34EA7900E31B7F /* CurrentOrderTableViewCell.m */; };
+		B8C6E3521D34EA9500E31B7F /* CurrentOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C6E3511D34EA9500E31B7F /* CurrentOrderTableViewCell.xib */; };
 		B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */; };
 		B8ED54E51D349BB8006FEA51 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */; };
 		B8ED54EB1D34B6D4006FEA51 /* HomeQuickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54EA1D34B6D4006FEA51 /* HomeQuickViewController.m */; };
@@ -144,6 +147,15 @@
 		B8C6E33B1D34BE9700E31B7F /* MostPopularCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MostPopularCollectionViewCell.h; sourceTree = "<group>"; };
 		B8C6E33C1D34BE9700E31B7F /* MostPopularCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MostPopularCollectionViewCell.m; sourceTree = "<group>"; };
 		B8C6E3411D34BF9B00E31B7F /* MostPopularCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MostPopularCollectionViewCell.xib; sourceTree = "<group>"; };
+		B8C6E3431D34E90700E31B7F /* CurrentOrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderTableViewController.h; sourceTree = "<group>"; };
+		B8C6E3441D34E90700E31B7F /* CurrentOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderTableViewController.m; sourceTree = "<group>"; };
+		B8C6E3461D34E91800E31B7F /* PendingOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingOrdersTableViewController.h; sourceTree = "<group>"; };
+		B8C6E3471D34E91800E31B7F /* PendingOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingOrdersTableViewController.m; sourceTree = "<group>"; };
+		B8C6E3491D34E93900E31B7F /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		B8C6E34A1D34E93900E31B7F /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
+		B8C6E34E1D34EA7900E31B7F /* CurrentOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderTableViewCell.h; sourceTree = "<group>"; };
+		B8C6E34F1D34EA7900E31B7F /* CurrentOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderTableViewCell.m; sourceTree = "<group>"; };
+		B8C6E3511D34EA9500E31B7F /* CurrentOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentOrderTableViewCell.xib; sourceTree = "<group>"; };
 		B8ED54E01D34787A006FEA51 /* PopularTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularTableViewCell.h; sourceTree = "<group>"; };
 		B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularTableViewCell.m; sourceTree = "<group>"; };
 		B8ED54E31D349BB8006FEA51 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
@@ -381,8 +393,16 @@
 		B82BE7721D2DE77900AF7091 /* Center */ = {
 			isa = PBXGroup;
 			children = (
+				B8C6E34D1D34E9FD00E31B7F /* xib */,
+				B8C6E34C1D34E9F500E31B7F /* Cell */,
 				B82BE7731D2DE78700AF7091 /* CenterViewController.h */,
 				B82BE7741D2DE78700AF7091 /* CenterViewController.m */,
+				B8C6E3431D34E90700E31B7F /* CurrentOrderTableViewController.h */,
+				B8C6E3441D34E90700E31B7F /* CurrentOrderTableViewController.m */,
+				B8C6E3461D34E91800E31B7F /* PendingOrdersTableViewController.h */,
+				B8C6E3471D34E91800E31B7F /* PendingOrdersTableViewController.m */,
+				B8C6E3491D34E93900E31B7F /* HistoryTableViewController.h */,
+				B8C6E34A1D34E93900E31B7F /* HistoryTableViewController.m */,
 			);
 			name = Center;
 			sourceTree = "<group>";
@@ -445,6 +465,23 @@
 			isa = PBXGroup;
 			children = (
 				B8C6E3411D34BF9B00E31B7F /* MostPopularCollectionViewCell.xib */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
+		B8C6E34C1D34E9F500E31B7F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B8C6E34E1D34EA7900E31B7F /* CurrentOrderTableViewCell.h */,
+				B8C6E34F1D34EA7900E31B7F /* CurrentOrderTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		B8C6E34D1D34E9FD00E31B7F /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				B8C6E3511D34EA9500E31B7F /* CurrentOrderTableViewCell.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -622,6 +659,7 @@
 				B82BE7531D2DE61B00AF7091 /* Home.storyboard in Resources */,
 				B82BE72A1D2DE54400AF7091 /* LaunchScreen.storyboard in Resources */,
 				B82BE75B1D2DE67700AF7091 /* Profile.storyboard in Resources */,
+				B8C6E3521D34EA9500E31B7F /* CurrentOrderTableViewCell.xib in Resources */,
 				B82BE7271D2DE54400AF7091 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,6 +739,8 @@
 				B8C6E3271D3489F500E31B7F /* NavigationController.m in Sources */,
 				B8C6E3301D34B5F100E31B7F /* DealsModel.m in Sources */,
 				B82BE77F1D2DE91E00AF7091 /* StorageMgr.m in Sources */,
+				B8C6E3451D34E90700E31B7F /* CurrentOrderTableViewController.m in Sources */,
+				B8C6E3481D34E91800E31B7F /* PendingOrdersTableViewController.m in Sources */,
 				B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */,
 				B82BE71F1D2DE54400AF7091 /* AppDelegate.m in Sources */,
 				B82BE7881D2DF84200AF7091 /* OtherViewController.m in Sources */,
@@ -715,6 +755,7 @@
 				B82BE7791D2DE90500AF7091 /* Utilities.m in Sources */,
 				B82BE71C1D2DE54400AF7091 /* main.m in Sources */,
 				B8C6E33D1D34BE9700E31B7F /* MostPopularCollectionViewCell.m in Sources */,
+				B8C6E34B1D34E93900E31B7F /* HistoryTableViewController.m in Sources */,
 				B82BE79A1D2E58E600AF7091 /* FeaturedViewController.m in Sources */,
 				B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */,
 				B82BE76D1D2DE75900AF7091 /* TagsViewController.m in Sources */,
@@ -722,6 +763,7 @@
 				B8C6E3391D34B8EE00E31B7F /* DealsOfTheMonthCollectionViewController.m in Sources */,
 				B82BE7711D2DE76F00AF7091 /* ProfileViewController.m in Sources */,
 				B82BE7691D2DE72A00AF7091 /* DealsViewController.m in Sources */,
+				B8C6E3501D34EA7900E31B7F /* CurrentOrderTableViewCell.m in Sources */,
 				B8ED54F41D34DC35006FEA51 /* AskQuestionViewController.m in Sources */,
 				B8BB2A381D2E502B0064ADE7 /* SignUpViewController.m in Sources */,
 				B82BE7651D2DE71200AF7091 /* HomeViewController.m in Sources */,

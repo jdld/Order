@@ -67,7 +67,7 @@
     
     
     _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:[self arr]];
-    _segmentedControl.frame = CGRectMake(0, naviHeight, UI_SCREEN_W, 32);
+    _segmentedControl.frame = CGRectMake(0, 0, UI_SCREEN_W, 32);
     _segmentedControl.selectionIndicatorHeight = 0;
     _segmentedControl.backgroundColor = [UIColor clearColor];
     _segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
