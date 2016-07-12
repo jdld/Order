@@ -10,7 +10,7 @@
 #import "SignInViewController.h"
 #import "SignUpViewController.h"
 #import <PureLayout/PureLayout.h>
-#import "TabBarViewController.h"
+
 @interface OtherViewController ()
 
 @end
@@ -125,10 +125,8 @@
 }
 
 - (void)enterSignUp {
-//    SignUpViewController *suVC = [[SignUpViewController alloc] init];
-//    [self presentViewController:suVC animated:YES completion:nil];
-    TabBarViewController *TabBar = [Utilities getStoryboardInstanceByIdentity:@"TabBar" byIdentity:@"TabBar"];
-    [self presentViewController:TabBar animated:YES completion:nil];
+    SignUpViewController *suVC = [[SignUpViewController alloc] init];
+    [self presentViewController:suVC animated:YES completion:nil];
 }
 
 @end
