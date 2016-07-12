@@ -126,5 +126,10 @@
     textField.leftView = leftview;
 }
 
++ (float)stringHeight:(NSString *)str width:(float)width forfontSize:(CGFloat)fontSize{
+    NSDictionary * dic2 = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:fontSize]};
+    CGRect stringSize = [str boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic2 context:nil];
+    return stringSize.size.height;
+}
 
 @end

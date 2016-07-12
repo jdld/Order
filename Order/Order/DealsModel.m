@@ -1,0 +1,13 @@
+//
+//  DealsModel.m
+//  Order
+//
+//  Created by Etong on 16/7/12.
+//  Copyright © 2016年 Etong. All rights reserved.
+//
+
+#import "DealsModel.h"
+
+@implementation DealsModel
+
+@end
