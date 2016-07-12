@@ -859,7 +859,7 @@
 
 - (NSDictionary *)resultingTitleTextAttributes {
     NSDictionary *defaults = @{
-                               NSFontAttributeName : [UIFont fontWithName:@"Marion-Regular" size:15.0f],
+                               NSFontAttributeName : [UIFont fontWithName:@"Marion-Regular" size:13.0f],
                                NSForegroundColorAttributeName : [UIColor lightGrayColor],
                                };
     
