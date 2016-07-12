@@ -37,9 +37,14 @@
     _bg1.image = [UIImage imageNamed:@"1bg"];
     [self.view addSubview:_bg1];
     
-    _icon = [[UIImageView alloc] initWithFrame:CGRectMake(UI_SCREEN_W / 2 - 60, UI_SCREEN_H / 8, 120, 120)];
+    _icon = [[UIImageView alloc] init];
     _icon.image = [UIImage imageNamed:@"icon"];
     [self.view addSubview:_icon];
+    
+    [_icon autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view withOffset:60];
+    [_icon autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+    [_icon autoSetDimension:ALDimensionWidth toSize:120];
+    [_icon autoSetDimension:ALDimensionHeight toSize:120];
     
     _iconName = [[UILabel alloc]init];
     _iconName.text = @"Order";

@@ -39,6 +39,8 @@
 		B8BB2A381D2E502B0064ADE7 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BB2A371D2E502B0064ADE7 /* SignUpViewController.m */; };
 		B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */; };
 		B8ED54E51D349BB8006FEA51 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */; };
+		B8C6E3271D3489F500E31B7F /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E3261D3489F500E31B7F /* NavigationController.m */; };
+		B8C6E32A1D348B9500E31B7F /* UITextField+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E3291D348B9500E31B7F /* UITextField+LXExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,10 @@
 		B8ED54E11D34787A006FEA51 /* PopularTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularTableViewCell.m; sourceTree = "<group>"; };
 		B8ED54E31D349BB8006FEA51 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		B8C6E3251D3489F500E31B7F /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		B8C6E3261D3489F500E31B7F /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		B8C6E3281D348B9500E31B7F /* UITextField+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LXExtension.h"; sourceTree = "<group>"; };
+		B8C6E3291D348B9500E31B7F /* UITextField+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LXExtension.m"; sourceTree = "<group>"; };
 		DD35A665C02B64F23C671F1D /* Pods-Order.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Order.release.xcconfig"; path = "Pods/Target Support Files/Pods-Order/Pods-Order.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +285,8 @@
 			children = (
 				B82BE75E1D2DE6D900AF7091 /* TabBarViewController.h */,
 				B82BE75F1D2DE6D900AF7091 /* TabBarViewController.m */,
+				B8C6E3251D3489F500E31B7F /* NavigationController.h */,
+				B8C6E3261D3489F500E31B7F /* NavigationController.m */,
 			);
 			name = TabBar;
 			sourceTree = "<group>";
@@ -339,6 +347,8 @@
 		B82BE7761D2DE8DA00AF7091 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B8C6E3281D348B9500E31B7F /* UITextField+LXExtension.h */,
+				B8C6E3291D348B9500E31B7F /* UITextField+LXExtension.m */,
 				B82BE7771D2DE90500AF7091 /* Utilities.h */,
 				B82BE7781D2DE90500AF7091 /* Utilities.m */,
 				B82BE77C1D2DE91E00AF7091 /* StorageMgr.h */,
@@ -588,6 +598,7 @@
 			files = (
 				B82BE7971D2E58D400AF7091 /* PopularViewController.m in Sources */,
 				B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */,
+				B8C6E3271D3489F500E31B7F /* NavigationController.m in Sources */,
 				B82BE77F1D2DE91E00AF7091 /* StorageMgr.m in Sources */,
 				B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */,
 				B82BE71F1D2DE54400AF7091 /* AppDelegate.m in Sources */,
@@ -602,6 +613,7 @@
 				B82BE79A1D2E58E600AF7091 /* FeaturedViewController.m in Sources */,
 				B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */,
 				B82BE76D1D2DE75900AF7091 /* TagsViewController.m in Sources */,
+				B8C6E32A1D348B9500E31B7F /* UITextField+LXExtension.m in Sources */,
 				B82BE7711D2DE76F00AF7091 /* ProfileViewController.m in Sources */,
 				B82BE7691D2DE72A00AF7091 /* DealsViewController.m in Sources */,
 				B8BB2A381D2E502B0064ADE7 /* SignUpViewController.m in Sources */,

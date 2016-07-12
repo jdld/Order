@@ -29,30 +29,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>WXTabBarController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0D417FC8E74A527C029C4E57CF243C7B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2AB49797D14D57FA43A345254AFB9F18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72EFED6468F0333C096220854DE96BA6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7B66DD8AFF84199507F100A126CCBE8A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>994F27DDA858E4DBDA7AAE277E075A58</key>
+		<key>954D734A5A6A34C066163EB5DDD9A1AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F3BC7E171FF0ADA27DCA7F287A73D54E</key>
+		<key>EDD8C01BF778262D89EED3BAD98361FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

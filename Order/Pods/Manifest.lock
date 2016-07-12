@@ -3,22 +3,19 @@ PODS:
   - IQKeyboardManager (4.0.4)
   - PureLayout (3.0.2)
   - UITableView+FDTemplateLayoutCell (1.4)
-  - WXTabBarController (0.1)
 
 DEPENDENCIES:
   - HMSegmentedControl
   - IQKeyboardManager
   - PureLayout
   - UITableView+FDTemplateLayoutCell
-  - WXTabBarController (~> 0.1)
 
 SPEC CHECKSUMS:
   HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
   IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
-  WXTabBarController: 086f2f9e62afebf835e43946bb883d2f8a43aed7
 
-PODFILE CHECKSUM: 118ed60d8ddb88a6a61302af7f2b39067479a599
+PODFILE CHECKSUM: 75973f2b6d07b7aa8fd73af6ae0966d4a79cc4a8
 
 COCOAPODS: 1.0.1
