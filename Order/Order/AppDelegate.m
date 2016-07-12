@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OtherViewController.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface AppDelegate ()
 @property (strong, nonatomic) OtherViewController *oVC;
@@ -17,10 +18,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
-//    [_window makeKeyAndVisible];
-//    [_window setRootViewController:_oVC];
+    _oVC = [[OtherViewController alloc] init];
+    _window.rootViewController = _oVC;
+    
+   [_window makeKeyAndVisible];
+    
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    //开启整个功能
+    manager.enable = YES;
+    //点击背景是否收起键盘
+    manager.shouldResignOnTouchOutside = YES;
+    //控制键盘工具条上的字体颜色
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    //是否显示键盘上的工具条
+    manager.enableAutoToolbar = NO;
     return YES;
 }
 
