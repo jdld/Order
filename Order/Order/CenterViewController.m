@@ -50,23 +50,26 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(NextAction)];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
-    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 32, UI_SCREEN_W, UI_SCREEN_H)];
+    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 38, UI_SCREEN_W, UI_SCREEN_H)];
+    _scrollView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_scrollView];
     
     [self createSegmentedControl];
 }
 
 - (void)createSegmentedControl {
-    NSDictionary *dict = @{NSForegroundColorAttributeName:UIColorFromRGB(30, 32, 36), NSFontAttributeName:[UIFont fontWithName:@"AvenirNextCondensed-Regular" size:15]};
+    NSDictionary *dict = @{NSForegroundColorAttributeName:UIColorFromRGB(30, 32, 36), NSFontAttributeName:[UIFont systemFontOfSize:15]};
     
     
     _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:[self arr]];
-    _segmentedControl.frame = CGRectMake(0, 0, UI_SCREEN_W, 32);
+    _segmentedControl.frame = CGRectMake(0, 0, UI_SCREEN_W, 38);
     _segmentedControl.selectionIndicatorHeight = 0;
-    _segmentedControl.backgroundColor = [UIColor clearColor];
+    _segmentedControl.backgroundColor = [UIColor whiteColor];
     _segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
     _segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
     _segmentedControl.selectedTitleTextAttributes = dict;
+    _segmentedControl.layer.shadowOffset = CGSizeMake(0, 1);
+    _segmentedControl.layer.shadowOpacity = 0.1f;
     
     __weak typeof(self) weakSelf = self;
     [_segmentedControl setIndexChangeBlock:^(NSInteger index) {
@@ -94,13 +97,21 @@
     HistoryTableViewController *dealsOf = [[HistoryTableViewController alloc]init];
     [self setSubviewOn:dealsOf view:view3];
     
-    [self.view addSubview:_segmentedControl];
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 38)];
+    bgView.layer.shadowOffset = CGSizeMake(0, 1);
+    bgView.layer.shadowOpacity = 0.2f;
+    bgView.layer.shadowRadius = 1.0f;
+    [self.view addSubview:bgView];
+    
+    [bgView addSubview:_segmentedControl];
+    self.view.backgroundColor = UIColorFromRGB(248, 248, 248);
 }
 
 //根据提供的ViewController改变当前显示的选项卡
 - (void)setSubviewOn:(UIViewController *)viewController view:(UIView *)view {
     [self addChildViewController:viewController];
     viewController.view.frame = CGRectMake(0, 0, UI_SCREEN_W, view.frame.size.height);
+    view.backgroundColor = [UIColor clearColor];
     [view addSubview:viewController.view];
     [self.scrollView addSubview:view];
 }

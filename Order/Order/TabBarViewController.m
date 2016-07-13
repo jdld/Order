@@ -64,10 +64,9 @@
     _tabBarController.viewControllers = @[homeNav,DealsNav,CenterNav,TagsNav,ProfileNav];
     
     self.tabBarController = _tabBarController;
-    _tabBarController.tabBar.tintColor = [UIColor blueColor];
     [self.view addSubview:_tabBarController.view];
     
-    self.view.backgroundColor = [UIColor colorWithRed:248.f/255.f green:247.f/255.f blue:246.f/255.f alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:254.f/255.f green:254.f/255.f blue:254.f/255.f alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {
