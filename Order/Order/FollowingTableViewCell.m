@@ -1,14 +1,14 @@
 //
-//  PopularTableViewCell.m
+//  FollowingTableViewCell.m
 //  Order
 //
-//  Created by Etong on 16/7/12.
+//  Created by Etong on 16/7/13.
 //  Copyright © 2016年 Etong. All rights reserved.
 //
 
-#import "PopularTableViewCell.h"
+#import "FollowingTableViewCell.h"
 
-@implementation PopularTableViewCell
+@implementation FollowingTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -26,12 +26,11 @@
     _followBut.layer.borderColor = [UIColor colorWithRed:0.f/255.f green:122.f/255.f blue:255.f/255.f alpha:1].CGColor;
     _followBut.layer.borderWidth = 1;
     _followBut.layer.cornerRadius = 5;
-
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
     
 }

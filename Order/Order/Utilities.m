@@ -132,4 +132,26 @@
     return stringSize.size.height;
 }
 
++ (void)navigationRedDotSetTabBarToSelected:(UIViewController *)vc TabBar:(NSInteger)selectedIndex{
+    NSInteger i = 2*selectedIndex + 1;
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(UI_SCREEN_W/8*i + 10, 15, 10, 10)];
+    view.tag = selectedIndex + 888;
+    view.backgroundColor = [UIColor colorWithRed:225.0f/255.0f green:96.0f/255.0f blue:92.0f/255.0f alpha:1.0f];
+    view.layer.borderWidth = 1;
+    view.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
+    view.layer.cornerRadius = 5;
+    [view setClipsToBounds:YES];
+    
+    
+    [vc.navigationController.tabBarController.tabBar addSubview:view];
+}
+
++ (void)removeRedDotGetTabBarToSelected:(NSInteger)selectedIndex onView:(UIViewController *)vc {
+    for (UIView *subView in [vc.navigationController.tabBarController.tabBar subviews]) {
+        if (subView.tag == selectedIndex + 888) {
+            [subView removeFromSuperview];
+        }
+    }
+}
+
 @end

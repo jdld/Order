@@ -58,7 +58,7 @@
 //滑动选项卡创建
 - (void)createSegmentedControl{
     
-    NSDictionary * dic2 = @{ NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName: [UIFont fontWithName:@"Marion-Regular" size:13.0f],};
+    NSDictionary * dic2 = @{ NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName: [UIFont fontWithName:@"Marion-Regular" size:13.0f]};
     NSArray *array = [[NSArray alloc]initWithObjects:@"Most Popular",@"Featured",@"Top Sellers",@"Following", nil];
     _segmentedControl2 = [[HMSegmentedControl alloc] initWithSectionTitles:array];
     _segmentedControl2.frame = CGRectMake(0, 0, UI_SCREEN_W, 32);

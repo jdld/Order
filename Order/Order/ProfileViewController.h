@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *backView1;
+@property (weak, nonatomic) IBOutlet UIView *backView2;
+@property (weak, nonatomic) IBOutlet UIButton *editBut;
 
 @end

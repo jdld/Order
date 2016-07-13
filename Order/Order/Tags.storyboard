@@ -16,13 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="DhN-Es-zf2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQb-DF-RzE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5d-sU-Sos">
+                                <rect key="frame" x="30" y="50" width="315" height="29"/>
+                                <string key="text">Help us make the experience perfect for you.Choose the items that you’re the most interested in.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AQb-DF-RzE" firstAttribute="top" secondItem="DhN-Es-zf2" secondAttribute="top" id="OqC-3i-oZj"/>
+                            <constraint firstAttribute="trailing" secondItem="c5d-sU-Sos" secondAttribute="trailing" constant="30" id="TiO-Cm-LwY"/>
+                            <constraint firstItem="c5d-sU-Sos" firstAttribute="leading" secondItem="DhN-Es-zf2" secondAttribute="leading" constant="30" id="YID-Gf-10e"/>
+                            <constraint firstItem="c5d-sU-Sos" firstAttribute="top" secondItem="phl-rg-yfK" secondAttribute="bottom" constant="30" id="gbr-Cn-dxJ"/>
+                            <constraint firstAttribute="trailing" secondItem="AQb-DF-RzE" secondAttribute="trailing" id="kCf-mq-FKL"/>
+                            <constraint firstItem="yJX-u7-qut" firstAttribute="top" secondItem="AQb-DF-RzE" secondAttribute="bottom" id="zG5-Mm-UVU"/>
+                            <constraint firstItem="AQb-DF-RzE" firstAttribute="leading" secondItem="DhN-Es-zf2" secondAttribute="leading" id="zLl-y2-V8Z"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrollView" destination="AQb-DF-RzE" id="vM3-fE-nKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BP1-Bj-Uvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="412"/>
+            <point key="canvasLocation" x="215.5" y="411.5"/>
         </scene>
     </scenes>
 </document>

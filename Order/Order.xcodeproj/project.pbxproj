@@ -35,6 +35,9 @@
 		B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE79C1D2E58F100AF7091 /* SellersViewController.m */; };
 		B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */; };
 		B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */; };
+		B8A9AAF11D3622B000FFF520 /* FeaturedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF01D3622B000FFF520 /* FeaturedTableViewCell.m */; };
+		B8A9AAF41D36254400FFF520 /* SellersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF31D36254400FFF520 /* SellersTableViewCell.m */; };
+		B8A9AAF71D3625E400FFF520 /* FollowingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF61D3625E400FFF520 /* FollowingTableViewCell.m */; };
 		B8BB2A351D2E501E0064ADE7 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BB2A341D2E501E0064ADE7 /* SignInViewController.m */; };
 		B8BB2A381D2E502B0064ADE7 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BB2A371D2E502B0064ADE7 /* SignUpViewController.m */; };
 		B8BBE5121D35CF0A006E7AA8 /* CurrentOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BBE5111D35CF0A006E7AA8 /* CurrentOrderModel.m */; };
@@ -133,6 +136,12 @@
 		B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
 		B82BE7A21D2E5A5700AF7091 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		B8A9AAEF1D3622B000FFF520 /* FeaturedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedTableViewCell.h; sourceTree = "<group>"; };
+		B8A9AAF01D3622B000FFF520 /* FeaturedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedTableViewCell.m; sourceTree = "<group>"; };
+		B8A9AAF21D36254400FFF520 /* SellersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellersTableViewCell.h; sourceTree = "<group>"; };
+		B8A9AAF31D36254400FFF520 /* SellersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellersTableViewCell.m; sourceTree = "<group>"; };
+		B8A9AAF51D3625E400FFF520 /* FollowingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingTableViewCell.h; sourceTree = "<group>"; };
+		B8A9AAF61D3625E400FFF520 /* FollowingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingTableViewCell.m; sourceTree = "<group>"; };
 		B8BB2A331D2E501E0064ADE7 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		B8BB2A341D2E501E0064ADE7 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		B8BB2A361D2E502B0064ADE7 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -535,6 +544,8 @@
 			children = (
 				B82BE7981D2E58E600AF7091 /* FeaturedViewController.h */,
 				B82BE7991D2E58E600AF7091 /* FeaturedViewController.m */,
+				B8A9AAEF1D3622B000FFF520 /* FeaturedTableViewCell.h */,
+				B8A9AAF01D3622B000FFF520 /* FeaturedTableViewCell.m */,
 			);
 			name = Featured;
 			sourceTree = "<group>";
@@ -544,6 +555,8 @@
 			children = (
 				B82BE79B1D2E58F100AF7091 /* SellersViewController.h */,
 				B82BE79C1D2E58F100AF7091 /* SellersViewController.m */,
+				B8A9AAF21D36254400FFF520 /* SellersTableViewCell.h */,
+				B8A9AAF31D36254400FFF520 /* SellersTableViewCell.m */,
 			);
 			name = Sellers;
 			sourceTree = "<group>";
@@ -553,6 +566,8 @@
 			children = (
 				B82BE79E1D2E58FE00AF7091 /* FollowingViewController.h */,
 				B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */,
+				B8A9AAF51D3625E400FFF520 /* FollowingTableViewCell.h */,
+				B8A9AAF61D3625E400FFF520 /* FollowingTableViewCell.m */,
 			);
 			name = Following;
 			sourceTree = "<group>";
@@ -767,12 +782,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B82BE7971D2E58D400AF7091 /* PopularViewController.m in Sources */,
+				B8A9AAF11D3622B000FFF520 /* FeaturedTableViewCell.m in Sources */,
 				B8C6E3331D34B89B00E31B7F /* MostPopularCollectionViewController.m in Sources */,
 				B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */,
 				B8C6E3271D3489F500E31B7F /* NavigationController.m in Sources */,
 				B8C6E3301D34B5F100E31B7F /* DealsModel.m in Sources */,
 				B82BE77F1D2DE91E00AF7091 /* StorageMgr.m in Sources */,
 				B8C6E3451D34E90700E31B7F /* CurrentOrderTableViewController.m in Sources */,
+				B8A9AAF41D36254400FFF520 /* SellersTableViewCell.m in Sources */,
 				B8C6E3481D34E91800E31B7F /* PendingOrdersTableViewController.m in Sources */,
 				B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */,
 				B8BBE5161D35D6F6006E7AA8 /* CompleteOrderViewController.m in Sources */,
@@ -792,6 +809,7 @@
 				B82BE71C1D2DE54400AF7091 /* main.m in Sources */,
 				B8C6E33D1D34BE9700E31B7F /* MostPopularCollectionViewCell.m in Sources */,
 				B8C6E34B1D34E93900E31B7F /* HistoryTableViewController.m in Sources */,
+				B8A9AAF71D3625E400FFF520 /* FollowingTableViewCell.m in Sources */,
 				B82BE79A1D2E58E600AF7091 /* FeaturedViewController.m in Sources */,
 				B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */,
 				B82BE76D1D2DE75900AF7091 /* TagsViewController.m in Sources */,

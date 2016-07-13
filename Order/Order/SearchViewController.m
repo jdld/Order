@@ -13,6 +13,7 @@
 @interface SearchViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *objArr;
 
 @end
 
@@ -30,6 +31,20 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = NO;
+    
+    _objArr = [NSMutableArray new];
+    [self createIntoData];
+    [_tableView reloadData];
+}
+
+- (void)createIntoData {
+    NSDictionary *dic1 = @{@"image":@"shop1",@"name":@"Beats Solo 2",@"detial":@"Wireless On Ear Headphones - Gold",@"much":@"299.95"};
+    NSDictionary *dic2 = @{@"image":@"shop2",@"name":@"B&O PLAY BeoPlay H8",@"detial":@"Wireless On-Ear Headphones",@"much":@"499.95"};
+    NSDictionary *dic3 = @{@"image":@"shop3",@"name":@"Master & Dynamic MH40",@"detial":@"Over-Ear Headphones - Brown",@"much":@"399.95"};
+    
+    [_objArr addObject:dic1];
+    [_objArr addObject:dic2];
+    [_objArr addObject:dic3];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -110,17 +125,26 @@
 
 #pragma mark - TableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return _objArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    NSDictionary *dic = _objArr[indexPath.row];
+    cell.ImageView.image = [UIImage imageNamed:dic[@"image"]];
+    cell.titleLab.text = dic[@"name"];
+    cell.detialLab.text = dic[@"detial"];
+    cell.numberLab.text = dic[@"much"];
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dic = _objArr[indexPath.row];
     DetialViewController *Detial = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"Detial"];
+    Detial.dict = dic;
     [self.navigationController pushViewController:Detial animated:YES];
 }
 

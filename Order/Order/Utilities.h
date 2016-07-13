@@ -40,4 +40,10 @@
 
 //计算文字在界面中的高度
 + (float)stringHeight:(NSString *)str width:(float)width forfontSize:(CGFloat)fontSize;
+
+//tabBar创建小红点
++ (void)navigationRedDotSetTabBarToSelected:(UIViewController *)vc TabBar:(NSInteger)selectedIndex;
+//tabBar去除小红点
++ (void)removeRedDotGetTabBarToSelected:(NSInteger)selectedIndex onView:(UIViewController *)vc;
+
 @end

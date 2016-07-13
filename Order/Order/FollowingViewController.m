@@ -7,8 +7,11 @@
 //
 
 #import "FollowingViewController.h"
+#import "FollowingTableViewCell.h"
+#import "HomeQuickViewController.h"
 
-@interface FollowingViewController ()
+@interface FollowingViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorStyle = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +30,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - TableViewDataSource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 370;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FollowingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [cell start:3];
+    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushCut)];
+    [cell.popularLayerIV addGestureRecognizer:tapGesture];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+- (void)pushCut {
+    HomeQuickViewController *HomeQuick = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"HomeQuick"];
+    [self.navigationController pushViewController:HomeQuick animated:NO];
+}
 /*
 #pragma mark - Navigation
 
