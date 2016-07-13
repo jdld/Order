@@ -1,31 +1,27 @@
 //
-//  DealsViewController.m
+//  CompleteOrderViewController.m
 //  Order
 //
-//  Created by Etong on 16/7/7.
+//  Created by Etong on 16/7/13.
 //  Copyright © 2016年 Etong. All rights reserved.
 //
 
-#import "DealsViewController.h"
-#import "MostPopularCollectionViewController.h"
-#import "FeaturedCollectionViewController.h"
-#import "DealsOfTheMonthCollectionViewController.h"
+#import "CompleteOrderViewController.h"
+#import "ShippingDetailsViewController.h"
+#import "ReviewViewController.h"
 #import <HMSegmentedControl.h>
 
-@interface DealsViewController () {
-    CGFloat naviHeight;
-}
+@interface CompleteOrderViewController ()
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (nonatomic, strong) HMSegmentedControl *segmentedControl;
 @property (strong, nonatomic) NSArray *arr;
-
 @end
 
-@implementation DealsViewController
+@implementation CompleteOrderViewController
 
 - (NSArray *)arr {
     if (_arr == nil) {
-        _arr = @[@"Most Popular", @"Featured", @"Deals of the month"];
+        _arr = @[@"Personal & Shipping Details", @"Review & Purchase"];
     }
     return _arr;
 }
@@ -41,21 +37,18 @@
 }
 
 - (void)UIAutoLaout {
-    self.navigationItem.title = @"Deals";
+    self.navigationItem.title = @"Complete Order";
     NSDictionary *dict = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     [self.navigationController.navigationBar setTitleTextAttributes:dict];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Navigation"] forBarMetrics:UIBarMetricsDefault];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"more"] style:UIBarButtonItemStylePlain target:self action:@selector(more)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(search)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(NextAction)];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
-    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
-    CGRect rectNav = self.navigationController.navigationBar.frame;
-    naviHeight = rectNav.size.height + rectStatus.size.height;
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 38, UI_SCREEN_W, UI_SCREEN_H)];
     _scrollView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_scrollView];
@@ -90,16 +83,12 @@
     float viewHeight = self.view.frame.size.height - rectNav.size.height - rectStatus.size.height - 76;
     
     UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, viewHeight)];
-    MostPopularCollectionViewController *popular = [[MostPopularCollectionViewController alloc]init];
-    [self setSubviewOn:popular view:view1];
+    ShippingDetailsViewController *shipping = [[ShippingDetailsViewController alloc]init];
+    [self setSubviewOn:shipping view:view1];
     
     UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(UI_SCREEN_W, 0, UI_SCREEN_W, viewHeight)];
-    FeaturedCollectionViewController *featured = [[FeaturedCollectionViewController alloc]init];
-    [self setSubviewOn:featured view:view2];
-    
-    UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(UI_SCREEN_W * 2, 0, UI_SCREEN_W, viewHeight)];
-    DealsOfTheMonthCollectionViewController *dealsOf = [[DealsOfTheMonthCollectionViewController alloc]init];
-    [self setSubviewOn:dealsOf view:view3];
+    ReviewViewController *review = [[ReviewViewController alloc]init];
+    [self setSubviewOn:review view:view2];
     
     UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 38)];
     bgView.layer.shadowOffset = CGSizeMake(0, 1);
@@ -120,13 +109,12 @@
     [self.scrollView addSubview:view];
 }
 
-- (void)more {
-    NSLog(@"more");
+- (void)NextAction {
+    
 }
 
-- (void)search {
-    NSLog(@"search");
+- (void)backAction {
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 @end

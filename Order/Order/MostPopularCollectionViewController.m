@@ -109,6 +109,9 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.layer.cornerRadius = 5;
     cell.backgroundColor = [UIColor whiteColor];
     cell.deals = _dealsArr[indexPath.row];
+    cell.layer.masksToBounds = NO;
+    cell.layer.shadowOffset = CGSizeMake(0, 1);
+    cell.layer.shadowOpacity = 0.1f;
 //    [cell systemLayoutSizeFittingSize:CGSizeMake(cell.frame.size.width, cell.frame.size.height)];
     return cell;
 }
@@ -119,7 +122,6 @@ static NSString * const reuseIdentifier = @"Cell";
     CGFloat titleHeight = [Utilities stringHeight:model.title width:UI_SCREEN_W - 60 forfontSize:16];
     CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:UI_SCREEN_W - 60 forfontSize:12];
     CGFloat height = titleHeight + detailsHeight + 257;
-    NSLog(@"%f", height);
     return CGSizeMake((UI_SCREEN_W - 30) / 2, height);
 }
 
