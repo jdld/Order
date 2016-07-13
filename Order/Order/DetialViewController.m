@@ -8,11 +8,14 @@
 
 #import "DetialViewController.h"
 #import "AskQuestionViewController.h"
+#import <SDCycleScrollView/SDCycleScrollView.h>
 
 @interface DetialViewController (){
     CGSize size;
+    NSArray *imageArr;
 }
 @property (strong, nonatomic)UIImageView *check;
+@property (strong ,nonatomic)SDCycleScrollView *cycleScrollView;
 
 @end
 
@@ -51,7 +54,22 @@
     _nameLab.text = _dict[@"name"];
     _detialLab.text = _dict[@"detial"];
     _numberLab.text = _dict[@"much"];
+ 
+    UIImage *image1 = [UIImage imageNamed:@"demo1"];
+    UIImage *image2 = [UIImage imageNamed:@"demo1"];
+    UIImage *image3 = [UIImage imageNamed:@"demo1"];
+    imageArr = @[image1,image2,image3];
+    [self createSDCycleScrollView];
+}
+
+- (void)createSDCycleScrollView {
+
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 240)  imageNamesGroup:imageArr];
+    _cycleScrollView.backgroundColor = [UIColor whiteColor];
+    _cycleScrollView.autoScrollTimeInterval = 10;
+    _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFit;
     
+    [self.view addSubview:_cycleScrollView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,22 +79,52 @@
 
 - (void)colorOne {
     [_color1 addSubview:_check];
+    UIImage *image1 = [UIImage imageNamed:@"demo3"];
+    UIImage *image2 = [UIImage imageNamed:@"demo3"];
+    UIImage *image3 = [UIImage imageNamed:@"demo3"];
+    imageArr = @[image1,image2,image3];
+    [_cycleScrollView removeFromSuperview];
+    [self createSDCycleScrollView];
 }
 
 - (void)colorTwo {
     [_color2 addSubview:_check];
+    UIImage *image1 = [UIImage imageNamed:@"demo5"];
+    UIImage *image2 = [UIImage imageNamed:@"demo5"];
+    UIImage *image3 = [UIImage imageNamed:@"demo5"];
+    imageArr = @[image1,image2,image3];
+    [_cycleScrollView removeFromSuperview];
+    [self createSDCycleScrollView];
 }
 
 - (void)colorThree {
     [_color3 addSubview:_check];
+    UIImage *image1 = [UIImage imageNamed:@"demo4"];
+    UIImage *image2 = [UIImage imageNamed:@"demo4"];
+    UIImage *image3 = [UIImage imageNamed:@"demo4"];
+    imageArr = @[image1,image2,image3];
+    [_cycleScrollView removeFromSuperview];
+    [self createSDCycleScrollView];
 }
 
 - (void)colorFour {
     [_color4 addSubview:_check];
+    UIImage *image1 = [UIImage imageNamed:@"demo2"];
+    UIImage *image2 = [UIImage imageNamed:@"demo2"];
+    UIImage *image3 = [UIImage imageNamed:@"demo2"];
+    imageArr = @[image1,image2,image3];
+    [_cycleScrollView removeFromSuperview];
+    [self createSDCycleScrollView];
 }
 
 - (void)colorFive {
     [_color5 addSubview:_check];
+    UIImage *image1 = [UIImage imageNamed:@"demo1"];
+    UIImage *image2 = [UIImage imageNamed:@"demo1"];
+    UIImage *image3 = [UIImage imageNamed:@"demo1"];
+    imageArr = @[image1,image2,image3];
+    [_cycleScrollView removeFromSuperview];
+    [self createSDCycleScrollView];
 }
 
 - (void) back {
