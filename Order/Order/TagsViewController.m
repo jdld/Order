@@ -31,7 +31,7 @@
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
     _scrollView.scrollEnabled = YES;
-    _scrollView.contentSize = CGSizeMake(UI_SCREEN_W + 40, UI_SCREEN_H);
+    _scrollView.contentSize = CGSizeMake(UI_SCREEN_W + 40, UI_SCREEN_H - 80);
     
     _arr = @[@"Travel",@"Travel",@"Music",@"Jewelry and Watches",@"Books",@"Electronics",@"Health and Beauty",@"Sporting Goods",@"Fashion",@"Home and Garden",@"Daily Deals",@"Bussiness and Industrial",@"Collectibles and Art"];
     

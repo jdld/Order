@@ -132,14 +132,19 @@
     return stringSize.size.height;
 }
 
+
 + (void)navigationRedDotSetTabBarToSelected:(UIViewController *)vc TabBar:(NSInteger)selectedIndex{
     NSInteger i = 2*selectedIndex + 1;
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(UI_SCREEN_W/8*i + 10, 15, 10, 10)];
+    UILabel *view = [[UILabel alloc]initWithFrame:CGRectMake(UI_SCREEN_W/10*i + 10, 5, 16, 16)];
     view.tag = selectedIndex + 888;
-    view.backgroundColor = [UIColor colorWithRed:225.0f/255.0f green:96.0f/255.0f blue:92.0f/255.0f alpha:1.0f];
+    view.backgroundColor = [UIColor blackColor];
     view.layer.borderWidth = 1;
     view.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
-    view.layer.cornerRadius = 5;
+    view.layer.cornerRadius = 8;
+    view.text = @"2";
+    view.font = [UIFont systemFontOfSize:10];
+    view.textColor = [UIColor whiteColor];
+    view.textAlignment = NSTextAlignmentCenter;
     [view setClipsToBounds:YES];
     
     
@@ -147,11 +152,12 @@
 }
 
 + (void)removeRedDotGetTabBarToSelected:(NSInteger)selectedIndex onView:(UIViewController *)vc {
-    for (UIView *subView in [vc.navigationController.tabBarController.tabBar subviews]) {
+    for (UILabel *subView in [vc.navigationController.tabBarController.tabBar subviews]) {
         if (subView.tag == selectedIndex + 888) {
             [subView removeFromSuperview];
         }
     }
 }
+
 
 @end

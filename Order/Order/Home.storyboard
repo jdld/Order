@@ -207,6 +207,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pr9-5O-kUX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="Bil-Vz-23w"/>
                                 </constraints>
@@ -266,7 +267,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-nz-f7r">
                                 <rect key="frame" x="150" y="592" width="75" height="75"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.16862745098039217" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.73101250986971977" green="0.16862745098039217" blue="0.69805093597841816" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uD6-nz-f7r" secondAttribute="height" multiplier="1:1" id="eJI-IH-sel"/>
                                 </constraints>

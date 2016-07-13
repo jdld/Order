@@ -12,6 +12,7 @@
 
 @interface AskQuestionViewController ()<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,UIScrollViewDelegate>{
     Boolean flag;
+    float cellHeight;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler    *returnKeyHandler;
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     flag = YES;
+    cellHeight = 0;
     
     self.title = @"Chat Support";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -66,7 +68,9 @@
 #pragma mark - UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dic = _objArr[indexPath.row];
-    return 140 + [Utilities stringHeight:dic[@"text"] width:_textView.frame.size.width - 2 forfontSize:17];
+    float height = 140 + [Utilities stringHeight:dic[@"text"] width:_textView.frame.size.width - 6 forfontSize:17];
+    cellHeight += height;
+    return 140 + [Utilities stringHeight:dic[@"text"] width:_textView.frame.size.width - 6 forfontSize:17];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -113,6 +117,11 @@
         _textView.text = @"";
         _detialLab.hidden = NO;
         [_tableView reloadData];
+        [_textView resignFirstResponder];
+        if (cellHeight > UI_SCREEN_H - 90) {
+             [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height -self.tableView.bounds.size.height) animated:YES];
+        }
+       
         [self performSelector:@selector(replyQuestion) withObject:self afterDelay:3.0f];
     }
     
