@@ -45,6 +45,7 @@
 		B8BBE5191D35D83A006E7AA8 /* ShippingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BBE5181D35D83A006E7AA8 /* ShippingDetailsViewController.m */; };
 		B8BBE51C1D35D84F006E7AA8 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BBE51B1D35D84F006E7AA8 /* ReviewViewController.m */; };
 		B8BBE51F1D3619CE006E7AA8 /* PXAutoHeightTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BBE51E1D3619CE006E7AA8 /* PXAutoHeightTextView.m */; };
+		B8BBE5221D363816006E7AA8 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BBE5211D363816006E7AA8 /* ReviewTableViewCell.m */; };
 		B8C6E3271D3489F500E31B7F /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E3261D3489F500E31B7F /* NavigationController.m */; };
 		B8C6E32A1D348B9500E31B7F /* UITextField+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E3291D348B9500E31B7F /* UITextField+LXExtension.m */; };
 		B8C6E3301D34B5F100E31B7F /* DealsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6E32F1D34B5F100E31B7F /* DealsModel.m */; };
@@ -156,6 +157,8 @@
 		B8BBE51B1D35D84F006E7AA8 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
 		B8BBE51D1D3619CE006E7AA8 /* PXAutoHeightTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAutoHeightTextView.h; sourceTree = "<group>"; };
 		B8BBE51E1D3619CE006E7AA8 /* PXAutoHeightTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAutoHeightTextView.m; sourceTree = "<group>"; };
+		B8BBE5201D363816006E7AA8 /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
+		B8BBE5211D363816006E7AA8 /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
 		B8C6E3251D3489F500E31B7F /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		B8C6E3261D3489F500E31B7F /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		B8C6E3281D348B9500E31B7F /* UITextField+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LXExtension.h"; sourceTree = "<group>"; };
@@ -516,6 +519,8 @@
 			children = (
 				B8C6E34E1D34EA7900E31B7F /* CurrentOrderTableViewCell.h */,
 				B8C6E34F1D34EA7900E31B7F /* CurrentOrderTableViewCell.m */,
+				B8BBE5201D363816006E7AA8 /* ReviewTableViewCell.h */,
+				B8BBE5211D363816006E7AA8 /* ReviewTableViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -794,6 +799,7 @@
 				B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */,
 				B8BBE5161D35D6F6006E7AA8 /* CompleteOrderViewController.m in Sources */,
 				B82BE71F1D2DE54400AF7091 /* AppDelegate.m in Sources */,
+				B8BBE5221D363816006E7AA8 /* ReviewTableViewCell.m in Sources */,
 				B8BBE51F1D3619CE006E7AA8 /* PXAutoHeightTextView.m in Sources */,
 				B8BBE5121D35CF0A006E7AA8 /* CurrentOrderModel.m in Sources */,
 				B82BE7881D2DF84200AF7091 /* OtherViewController.m in Sources */,
