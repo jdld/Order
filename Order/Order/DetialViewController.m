@@ -48,6 +48,10 @@
     _check.frame = CGRectMake(size.width/2 - 10, size.height/2 - 12, 20, 24);
     [_color5 addSubview:_check];
     
+    _nameLab.text = _dict[@"name"];
+    _detialLab.text = _dict[@"detial"];
+    _numberLab.text = _dict[@"much"];
+    
 }
 
 - (void)didReceiveMemoryWarning {

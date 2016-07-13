@@ -13,6 +13,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    _backView.layer.cornerRadius = 5;
+    
+    _backView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    _backView.layer.shadowOffset = CGSizeMake(0, 0.5);
+    _backView.layer.shadowOpacity = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

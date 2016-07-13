@@ -21,4 +21,11 @@
 - (IBAction)questionAction:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)purchaseAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
+@property (weak, nonatomic) IBOutlet UILabel *numberLab;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *detialLab;
+
+
+@property (strong, nonatomic) NSDictionary *dict;
+
 @end
