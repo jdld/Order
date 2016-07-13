@@ -2,20 +2,28 @@ PODS:
   - HMSegmentedControl (1.5.2)
   - IQKeyboardManager (4.0.4)
   - PureLayout (3.0.2)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - UITableView+FDTemplateLayoutCell (1.4)
 
 DEPENDENCIES:
   - HMSegmentedControl
   - IQKeyboardManager
   - PureLayout
+  - SDCycleScrollView (~> 1.64)
   - UITableView+FDTemplateLayoutCell
 
 SPEC CHECKSUMS:
   HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
   IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
 
-PODFILE CHECKSUM: 75973f2b6d07b7aa8fd73af6ae0966d4a79cc4a8
+PODFILE CHECKSUM: fb0bbeba3526f08f04434f8adbc7c8924e96be99
 
 COCOAPODS: 1.0.1
