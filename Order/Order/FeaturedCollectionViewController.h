@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FeaturedCollectionViewController : UICollectionViewController
+@interface FeaturedCollectionViewController : UIViewController
 
 @end

@@ -26,17 +26,41 @@
         model1.commodityImage = @"shop1";
         model1.commodityName = @"Master & Dynamic MH40";
         model1.commodityMsg = @"Over-Ear Headphones - Brown";
-        model1.price = @"$399.95";
+        model1.price = @"399.95";
         model1.quantity = @"2";
         CurrentOrderModel *model2 = [[CurrentOrderModel alloc] init];
         model2.headImage = @"Layer22";
         model2.nickname = @"Lisa Donovan";
-        model2.commodityImage = @"shop1";
+        model2.commodityImage = @"demo1";
         model2.commodityName = @"B&O PLAY BeoPlay H8";
         model2.commodityMsg = @"wireless On-Ear Headphones";
-        model2.price = @"$499.95";
+        model2.price = @"499.95";
         model2.quantity = @"2";
-        _arr = @[model1, model2];
+        CurrentOrderModel *model3 = [[CurrentOrderModel alloc] init];
+        model3.headImage = @"Layer11";
+        model3.nickname = @"Lisa Donovan";
+        model3.commodityImage = @"demo2";
+        model3.commodityName = @"B&O PLAY BeoPlay H8";
+        model3.commodityMsg = @"wireless On-Ear Headphones";
+        model3.price = @"349.95";
+        model3.quantity = @"2";
+        CurrentOrderModel *model4 = [[CurrentOrderModel alloc] init];
+        model4.headImage = @"Layer22";
+        model4.nickname = @"Lisa Donovan";
+        model4.commodityImage = @"demo3";
+        model4.commodityName = @"B&O PLAY BeoPlay H8";
+        model4.commodityMsg = @"wireless On-Ear Headphones";
+        model4.price = @"123.95";
+        model4.quantity = @"2";
+        CurrentOrderModel *model5 = [[CurrentOrderModel alloc] init];
+        model5.headImage = @"Layer22";
+        model5.nickname = @"Lisa Donovan";
+        model5.commodityImage = @"demo4";
+        model5.commodityName = @"B&O PLAY BeoPlay H8";
+        model5.commodityMsg = @"wireless On-Ear Headphones";
+        model5.price = @"734.95";
+        model5.quantity = @"2";
+        _arr = @[model1, model2, model3, model4, model5];
     }
     return _arr;
 }
@@ -72,7 +96,7 @@
     cell.contantView.layer.shadowOffset = CGSizeMake(0, 1);
     cell.contantView.layer.shadowOpacity = 0.2f;
     cell.contantView.layer.shadowRadius = 2;
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
 }
 

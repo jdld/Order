@@ -34,6 +34,7 @@
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     //是否显示键盘上的工具条
     manager.enableAutoToolbar = NO;
+
     return YES;
 }
 

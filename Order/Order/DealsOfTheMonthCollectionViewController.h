@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DealsOfTheMonthCollectionViewController : UICollectionViewController
+@interface DealsOfTheMonthCollectionViewController : UIViewController
 
 @end

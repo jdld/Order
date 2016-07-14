@@ -35,6 +35,8 @@
 		B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE79C1D2E58F100AF7091 /* SellersViewController.m */; };
 		B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */; };
 		B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */; };
+		B8815F501D37571900C633CB /* PaymentDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */; };
+		B8815F531D3775FC00C633CB /* CYXWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F521D3775FC00C633CB /* CYXWaterFlowLayout.m */; };
 		B8A9AAF11D3622B000FFF520 /* FeaturedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF01D3622B000FFF520 /* FeaturedTableViewCell.m */; };
 		B8A9AAF41D36254400FFF520 /* SellersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF31D36254400FFF520 /* SellersTableViewCell.m */; };
 		B8A9AAF71D3625E400FFF520 /* FollowingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF61D3625E400FFF520 /* FollowingTableViewCell.m */; };
@@ -137,6 +139,10 @@
 		B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
 		B82BE7A21D2E5A5700AF7091 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		B8815F4E1D37571900C633CB /* PaymentDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsTableViewCell.h; sourceTree = "<group>"; };
+		B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsTableViewCell.m; sourceTree = "<group>"; };
+		B8815F511D3775FC00C633CB /* CYXWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXWaterFlowLayout.h; sourceTree = "<group>"; };
+		B8815F521D3775FC00C633CB /* CYXWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYXWaterFlowLayout.m; sourceTree = "<group>"; };
 		B8A9AAEF1D3622B000FFF520 /* FeaturedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedTableViewCell.h; sourceTree = "<group>"; };
 		B8A9AAF01D3622B000FFF520 /* FeaturedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedTableViewCell.m; sourceTree = "<group>"; };
 		B8A9AAF21D36254400FFF520 /* SellersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellersTableViewCell.h; sourceTree = "<group>"; };
@@ -387,6 +393,8 @@
 		B82BE7661D2DE71600AF7091 /* Deals */ = {
 			isa = PBXGroup;
 			children = (
+				B8815F511D3775FC00C633CB /* CYXWaterFlowLayout.h */,
+				B8815F521D3775FC00C633CB /* CYXWaterFlowLayout.m */,
 				B8C6E33E1D34BF2300E31B7F /* xib */,
 				B8C6E33A1D34BE6200E31B7F /* Cell */,
 				B82BE7671D2DE72A00AF7091 /* DealsViewController.h */,
@@ -517,6 +525,8 @@
 		B8C6E34C1D34E9F500E31B7F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B8815F4E1D37571900C633CB /* PaymentDetailsTableViewCell.h */,
+				B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */,
 				B8C6E34E1D34EA7900E31B7F /* CurrentOrderTableViewCell.h */,
 				B8C6E34F1D34EA7900E31B7F /* CurrentOrderTableViewCell.m */,
 				B8BBE5201D363816006E7AA8 /* ReviewTableViewCell.h */,
@@ -793,8 +803,10 @@
 				B8C6E3271D3489F500E31B7F /* NavigationController.m in Sources */,
 				B8C6E3301D34B5F100E31B7F /* DealsModel.m in Sources */,
 				B82BE77F1D2DE91E00AF7091 /* StorageMgr.m in Sources */,
+				B8815F501D37571900C633CB /* PaymentDetailsTableViewCell.m in Sources */,
 				B8C6E3451D34E90700E31B7F /* CurrentOrderTableViewController.m in Sources */,
 				B8A9AAF41D36254400FFF520 /* SellersTableViewCell.m in Sources */,
+				B8815F531D3775FC00C633CB /* CYXWaterFlowLayout.m in Sources */,
 				B8C6E3481D34E91800E31B7F /* PendingOrdersTableViewController.m in Sources */,
 				B8ED54E21D34787A006FEA51 /* PopularTableViewCell.m in Sources */,
 				B8BBE5161D35D6F6006E7AA8 /* CompleteOrderViewController.m in Sources */,
