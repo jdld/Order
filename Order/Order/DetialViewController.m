@@ -16,6 +16,7 @@
 }
 @property (strong, nonatomic)UIImageView *check;
 @property (strong ,nonatomic)SDCycleScrollView *cycleScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -48,7 +49,7 @@
     
     _check = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"checkmark"]];
     _check.contentMode = UIViewContentModeScaleAspectFit;
-    _check.frame = CGRectMake(size.width/2 - 10, size.height/2 - 12, 20, 24);
+    _check.frame = CGRectMake(size.width/2 - 12, size.height/2 - 10, 24, 20);
     [_color5 addSubview:_check];
     
     _nameLab.text = _dict[@"name"];
@@ -60,6 +61,7 @@
     UIImage *image3 = [UIImage imageNamed:@"demo1"];
     imageArr = @[image1,image2,image3];
     [self createSDCycleScrollView];
+    
 }
 
 - (void)createSDCycleScrollView {
@@ -69,7 +71,7 @@
     _cycleScrollView.autoScrollTimeInterval = 10;
     _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFit;
     
-    [self.view addSubview:_cycleScrollView];
+    [self.scrollView addSubview:_cycleScrollView];
 }
 
 - (void)didReceiveMemoryWarning {

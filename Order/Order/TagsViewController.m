@@ -48,17 +48,18 @@
     for (int i = 0; i<= 12; i++) {
         int x = [self getRandomNumber:10+oldX to:30+oldX];
         int y = [self getRandomNumber:90+oldY to:110+oldY];
-        int H = [self getRandomNumber:80 to:110];
+        int H = [self getRandomNumber:UI_SCREEN_W/5 to:UI_SCREEN_W/4];
         
-        oldX = x + H;
+        oldX = x + H -10;
         
         if (oldX > UI_SCREEN_W - 40) {
-            oldY = y +20;
+            oldY = y +10;
             oldX = 0;
         }
         
         
         UIButton *but = [[UIButton alloc]initWithFrame:CGRectMake(x, y, H, H)];
+        but.backgroundColor = [UIColor clearColor];
         NSDictionary * dic = @{ NSForegroundColorAttributeName:[UIColor lightGrayColor],NSFontAttributeName: [UIFont systemFontOfSize:12]};
         NSAttributedString *attrStr = [[NSAttributedString alloc]initWithString:_arr[i] attributes:dic];
         [but setAttributedTitle:attrStr forState:UIControlStateNormal];
@@ -93,12 +94,18 @@
 }
 
 - (void)selectAction:(UIButton *)but {
-    NSLog(@"sss = %ld",(long)but.tag);
-    UIButton *butTag = [self.scrollView viewWithTag:but.tag];
-    butTag.backgroundColor = [UIColor colorWithRed:247.f/255.f green:98.f/255.f blue:11.f/255.f alpha:1];
-    NSDictionary * dic = @{ NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:12]};
-    NSAttributedString *attrStr = [[NSAttributedString alloc]initWithString:butTag.titleLabel.text attributes:dic];
-    [butTag setAttributedTitle:attrStr forState:UIControlStateNormal];
+        UIButton *butTag = [self.scrollView viewWithTag:but.tag];
+    if (butTag.backgroundColor == [UIColor clearColor]) {
+        butTag.backgroundColor = [UIColor colorWithRed:247.f/255.f green:98.f/255.f blue:11.f/255.f alpha:1];
+        NSDictionary * dic = @{ NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:12]};
+        NSAttributedString *attrStr = [[NSAttributedString alloc]initWithString:butTag.titleLabel.text attributes:dic];
+        [butTag setAttributedTitle:attrStr forState:UIControlStateNormal];
+    }else{
+        butTag.backgroundColor = [UIColor clearColor];
+        NSDictionary * dic = @{ NSForegroundColorAttributeName:[UIColor lightGrayColor],NSFontAttributeName: [UIFont systemFontOfSize:12]};
+        NSAttributedString *attrStr = [[NSAttributedString alloc]initWithString:butTag.titleLabel.text attributes:dic];
+        [butTag setAttributedTitle:attrStr forState:UIControlStateNormal];
+    }
 }
 /*
 #pragma mark - Navigation

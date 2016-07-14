@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLab;
 @property (weak, nonatomic) IBOutlet UILabel *detialLab;
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (strong, nonatomic) NSDictionary *dict;
 

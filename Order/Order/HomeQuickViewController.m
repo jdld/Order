@@ -69,13 +69,14 @@
     self.scrollView.pagingEnabled = YES;
     self.scrollView.scrollEnabled = YES;
     self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.contentSize = CGSizeMake(imageH * 5 + 20 , 168);
+    self.scrollView.contentSize = CGSizeMake(imageH * 5 + 30 , 168);
     self.scrollView.delegate = self;
     
     for (int i = 0; i < 5 ; i++) {
         UIImageView *heart = [[UIImageView alloc]initWithFrame:CGRectMake(i*(imageH + 20) - imageH/2, 44, imageH, imageH)];
         heart.image = [UIImage imageNamed:_ImageArr[i]];
         heart.layer.cornerRadius = 40;
+        heart.contentMode = UIViewContentModeScaleAspectFit;
         [self.scrollView addSubview:heart];
     }
 }
@@ -118,10 +119,10 @@
     float currentOffset = scrollView.contentOffset.x + scrollView.bounds.size.width - scrollView.contentInset.bottom;
     float maxminOffset = scrollView.contentSize.width;
     float offset = maxminOffset - currentOffset;
-    if (offset > 75) {
+    if (offset > 65) {
         NSLog(@"右移 = %f",offset);
         [self rightMoveImage];
-    }else if (offset < -75){
+    }else if (offset < -65){
         NSLog(@"左移 = %f",offset);
         [self leftMoveImage];
     }

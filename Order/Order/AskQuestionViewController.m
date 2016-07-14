@@ -68,9 +68,9 @@
 #pragma mark - UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dic = _objArr[indexPath.row];
-    float height = 140 + [Utilities stringHeight:dic[@"text"] width:_textView.frame.size.width - 6 forfontSize:17];
+    float height = 140 + [Utilities stringHeight:dic[@"text"] width:_textView.frame.size.width - 8 forfontSize:17];
     cellHeight += height;
-    return 140 + [Utilities stringHeight:dic[@"text"] width:_textView.frame.size.width - 6 forfontSize:17];
+    return 140 + [Utilities stringHeight:dic[@"text"] width:_textView.frame.size.width - 8 forfontSize:17];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
