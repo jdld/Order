@@ -29,11 +29,13 @@
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
     _ImageArr = [NSMutableArray new];
-    [_ImageArr addObject:@"PopularLayer2"];
-    [_ImageArr addObject:@"PopularLayer3"];
-    [_ImageArr addObject:@"PopularLayer1"];
-    [_ImageArr addObject:@"PopularLayer4"];
-    [_ImageArr addObject:@"PopularLayer5"];
+
+        [_ImageArr addObject:@"PopularLayer2"];
+        [_ImageArr addObject:@"PopularLayer3"];
+        [_ImageArr addObject:@"PopularLayer1"];
+        [_ImageArr addObject:@"PopularLayer4"];
+        [_ImageArr addObject:@"PopularLayer5"];
+    
     
     [self createSegmentedControl];
     [self mapping];
