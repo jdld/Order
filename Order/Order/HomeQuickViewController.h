@@ -33,4 +33,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *shopBut2;
 @property (weak, nonatomic) IBOutlet UIButton *followBut;
 
+@property ( nonatomic) NSInteger *index;
+
 @end

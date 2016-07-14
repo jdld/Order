@@ -978,9 +978,12 @@
                                         <connections>
                                             <outlet property="ImageView" destination="AYn-x5-kvA" id="zW5-m3-r0H"/>
                                             <outlet property="backView" destination="pad-Ua-8Ys" id="1uR-mX-ncm"/>
+                                            <outlet property="detialLab" destination="iYR-DL-MXy" id="SiK-Hj-2Ts"/>
                                             <outlet property="followBut" destination="gqk-82-pt9" id="ht3-0g-2Pv"/>
                                             <outlet property="layerView" destination="sPc-ke-R2T" id="bL3-m5-tEM"/>
+                                            <outlet property="nameLab" destination="7cB-2A-2hS" id="txK-iX-vbl"/>
                                             <outlet property="popularLayerIV" destination="Hwe-8M-ngS" id="M10-Wf-Tjr"/>
+                                            <outlet property="reviews" destination="Lot-80-iiv" id="uyq-Mf-3xZ"/>
                                             <outlet property="star1" destination="Sh7-jO-gwZ" id="Vq5-l1-aTz"/>
                                             <outlet property="star2" destination="F4Q-93-AaZ" id="veN-NR-bf7"/>
                                             <outlet property="star3" destination="wqe-nZ-jkH" id="WGh-d2-zfA"/>
