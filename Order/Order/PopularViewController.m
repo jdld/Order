@@ -12,6 +12,7 @@
 
 @interface PopularViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *objArr;
 
 @end
 
@@ -24,6 +25,12 @@
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = NO;
     
+    _objArr = [NSMutableArray new];
+    NSDictionary *dic1 = @{@"back":@"popularCell1",@"head":@"PopularLayer1",@"name":@"Mark Robertson",@"detial":@"San Francisco, California"};
+    NSDictionary *dic2 = @{@"back":@"popularCell2",@"head":@"PopularLayer2",@"name":@"Michael Jackson",@"detial":@"Indiana, Gary"};
+    [_objArr addObject:dic1];
+    [_objArr addObject:dic2];
+    [_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,12 +54,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return _objArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PopularTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSDictionary *dict = _objArr[indexPath.row];
+    cell.ImageView.image = [UIImage imageNamed:dict[@"back"]];
+    cell.popularLayerIV.image = [UIImage imageNamed:dict[@"head"]];
+    
     [cell start:3];
     UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushCut)];
     [cell.popularLayerIV addGestureRecognizer:tapGesture];
