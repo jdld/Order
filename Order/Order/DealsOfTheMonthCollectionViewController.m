@@ -8,39 +8,73 @@
 
 #import "DealsOfTheMonthCollectionViewController.h"
 #import "MostPopularCollectionViewCell.h"
+#import "DealsModel.h"
+#import "CYXWaterFlowLayout.h"
 
-@interface DealsOfTheMonthCollectionViewController ()
-
+@interface DealsOfTheMonthCollectionViewController ()<UICollectionViewDataSource,CYXWaterFlowLayoutDelegate>
+@property (strong, nonatomic) NSArray<DealsModel *> *dealsArr;
+@property (nonatomic, weak) UICollectionView *collectionView;
 @end
 
 @implementation DealsOfTheMonthCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
-- (instancetype)init{
+//- (instancetype)init{
+//
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+//    // 定义大小
+////    layout.itemSize = CGSizeMake(190, 320);
+////    layout.estimatedItemSize = CGSizeMake(190, 320);
+//    // 设置最小行间距
+//    layout.minimumLineSpacing = 10;
+//    // 设置垂直间距
+//    layout.minimumInteritemSpacing = 10;
+//    // 设置滚动方向（默认垂直滚动）
+//    //    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//    // 设置边缘的间距，默认是{0，0，0，0}
+//    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+//
+//    return [self initWithCollectionViewLayout:layout];
+//}
+
+- (NSArray *)dealsArr {
+    if (_dealsArr == nil) {
+        DealsModel *model1 = [[DealsModel alloc] init];
+        model1.headImage = @"demo1";
+        model1.title = @"White City Bike";
+        model1.detailsTitle = @"Be free, be more active. You have a chance to do that with this cool bike.";
+        model1.price = @"$499.95";
+        DealsModel *model2 = [[DealsModel alloc] init];
+        model2.headImage = @"demo2";
+        model2.title = @"Happy Hugs Coffee Cup";
+        model2.detailsTitle = @"Cool coffee cup for the sad rainy days. Buy this and improve your life.";
+        model2.price = @"$99.9";
+        DealsModel *model3 = [[DealsModel alloc] init];
+        model3.headImage = @"demo3";
+        model3.title = @"Designer's Desk";
+        model3.detailsTitle = @"Perfect your home office.";
+        model1.price = @"$324.95";
+        _dealsArr = @[model1, model2, model3];
+    }
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    // 定义大小
-    layout.itemSize = CGSizeMake(250, 400);
-    // 设置最小行间距
-    layout.minimumLineSpacing = 20;
-    // 设置垂直间距
-    layout.minimumInteritemSpacing = 0;
-    // 设置滚动方向（默认垂直滚动）
-    //    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    // 设置边缘的间距，默认是{0，0，0，0}
-    layout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
-    
-    return [self initWithCollectionViewLayout:layout];
+    return _dealsArr;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CYXWaterFlowLayout *layout = [[CYXWaterFlowLayout alloc]init];
+    layout.delegate = self;
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.collectionView.frame = self.view.bounds;
+    // 创建CollectionView
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:    CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64) collectionViewLayout:layout];
+    collectionView.backgroundColor = UIColorFromRGB(248, 248, 248);
+    collectionView.dataSource = self;
+    [self.view addSubview:collectionView];
+    self.collectionView = collectionView;
     
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MostPopularCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MostPopularCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    
     
     // Do any additional setup after loading the view.
 }
@@ -51,49 +85,60 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return self.dealsArr.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MostPopularCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.layer.cornerRadius = 5;
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.deals = self.dealsArr[indexPath.row];
+    cell.layer.masksToBounds = NO;
+    cell.layer.shadowOffset = CGSizeMake(0, 1);
+    cell.layer.shadowOpacity = 0.1f;
+    //    [cell systemLayoutSizeFittingSize:CGSizeMake(cell.frame.size.width, cell.frame.size.height)];
     
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    DealsModel *model = self.dealsArr[indexPath.row];
+//    CGFloat titleHeight = [Utilities stringHeight:model.title width:UI_SCREEN_W - 60 forfontSize:16];
+//    CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:UI_SCREEN_W - 60 forfontSize:12];
+//    CGFloat height = titleHeight + detailsHeight + 257;
+//    return CGSizeMake((UI_SCREEN_W - 30) / 2, height);
+//}
+//
+//#pragma mark <UICollectionViewDelegate>
+//
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSLog(@"------%zd", indexPath.item);
+//}
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)waterflowLayout:(CYXWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth
 {
-    NSLog(@"------%zd", indexPath.item);
+    //        DealsModel *model = self.dealsArr[indexPath.row];
+    //        CGFloat titleHeight = [Utilities stringHeight:model.title width:UI_SCREEN_W - 60 forfontSize:16];
+    //        CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:UI_SCREEN_W - 60 forfontSize:12];
+    //        CGFloat height = titleHeight + detailsHeight + 257;
+    return 380;
 }
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (CGFloat)rowMarginInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout
+{
+    return 10;
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
+- (CGFloat)columnCountInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout
+{
+    return 2;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
+- (UIEdgeInsets)edgeInsetsInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout
+{
+    return UIEdgeInsetsMake(10, 10, 10, 10);
 }
-*/
 
 @end
