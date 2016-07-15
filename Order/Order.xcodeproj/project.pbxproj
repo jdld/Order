@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9881CA8A09D936C35EC5C19F /* libPods-Order.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2445A53088149FAEBE4FFD5F /* libPods-Order.a */; };
+		B81128AE1D3872920020726F /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B81128AB1D3872920020726F /* HPGrowingTextView.m */; };
+		B81128AF1D3872920020726F /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = B81128AD1D3872920020726F /* HPTextViewInternal.m */; };
 		B82BE71C1D2DE54400AF7091 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE71B1D2DE54400AF7091 /* main.m */; };
 		B82BE71F1D2DE54400AF7091 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE71E1D2DE54400AF7091 /* AppDelegate.m */; };
 		B82BE7271D2DE54400AF7091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82BE7261D2DE54400AF7091 /* Assets.xcassets */; };
@@ -90,6 +92,10 @@
 /* Begin PBXFileReference section */
 		2445A53088149FAEBE4FFD5F /* libPods-Order.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Order.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA0DB3D518BC6CCC4534B92 /* Pods-Order.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Order.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Order/Pods-Order.debug.xcconfig"; sourceTree = "<group>"; };
+		B81128AA1D3872920020726F /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPGrowingTextView.h; path = HPGrowingTextView/HPGrowingTextView.h; sourceTree = "<group>"; };
+		B81128AB1D3872920020726F /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPGrowingTextView.m; path = HPGrowingTextView/HPGrowingTextView.m; sourceTree = "<group>"; };
+		B81128AC1D3872920020726F /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPTextViewInternal.h; path = HPGrowingTextView/HPTextViewInternal.h; sourceTree = "<group>"; };
+		B81128AD1D3872920020726F /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPTextViewInternal.m; path = HPGrowingTextView/HPTextViewInternal.m; sourceTree = "<group>"; };
 		B82BE7171D2DE54400AF7091 /* Order.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Order.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82BE71B1D2DE54400AF7091 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B82BE71D1D2DE54400AF7091 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -241,6 +247,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B81128A91D3872890020726F /* HPGrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				B81128AA1D3872920020726F /* HPGrowingTextView.h */,
+				B81128AB1D3872920020726F /* HPGrowingTextView.m */,
+				B81128AC1D3872920020726F /* HPTextViewInternal.h */,
+				B81128AD1D3872920020726F /* HPTextViewInternal.m */,
+			);
+			name = HPGrowingTextView;
+			sourceTree = "<group>";
+		};
 		B82BE70E1D2DE54400AF7091 = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +369,7 @@
 		B82BE7501D2DE5A000AF7091 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				B81128A91D3872890020726F /* HPGrowingTextView */,
 			);
 			name = 3rd;
 			sourceTree = "<group>";
@@ -837,6 +855,8 @@
 				B82BE79A1D2E58E600AF7091 /* FeaturedViewController.m in Sources */,
 				B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */,
 				B82BE76D1D2DE75900AF7091 /* TagsViewController.m in Sources */,
+				B81128AE1D3872920020726F /* HPGrowingTextView.m in Sources */,
+				B81128AF1D3872920020726F /* HPTextViewInternal.m in Sources */,
 				B8C6E32A1D348B9500E31B7F /* UITextField+LXExtension.m in Sources */,
 				B8C6E3391D34B8EE00E31B7F /* DealsOfTheMonthCollectionViewController.m in Sources */,
 				B82BE7711D2DE76F00AF7091 /* ProfileViewController.m in Sources */,

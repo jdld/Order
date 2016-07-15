@@ -64,6 +64,11 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    _scrollView.contentSize = CGSizeMake(UI_SCREEN_W, 330 + [Utilities stringHeight:_textView.text width:UI_SCREEN_W -  50 forfontSize:14]);
+}
+
 - (void)createSDCycleScrollView {
 
     _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 240)  imageNamesGroup:imageArr];

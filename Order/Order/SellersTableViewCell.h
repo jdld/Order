@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *popularLayerIV;
 @property (weak, nonatomic) IBOutlet UIView *layerView;
 @property (weak, nonatomic) IBOutlet UIButton *followBut;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *detialLab;
+@property (weak, nonatomic) IBOutlet UILabel *reviews;
 
 @property (weak, nonatomic) IBOutlet UIButton *star1;
 @property (weak, nonatomic) IBOutlet UIButton *star2;

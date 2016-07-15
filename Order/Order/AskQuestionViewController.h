@@ -9,11 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AskQuestionViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *textView;
-@property (weak, nonatomic) IBOutlet UILabel *detialLab;
-
-
-- (IBAction)sendAction:(UIButton *)sender forEvent:(UIEvent *)event;
-@property (weak, nonatomic) IBOutlet UIView *backView;
 
 @end

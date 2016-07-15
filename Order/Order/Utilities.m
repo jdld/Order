@@ -133,7 +133,7 @@
 }
 
 
-+ (void)navigationRedDotSetTabBarToSelected:(UIViewController *)vc TabBar:(NSInteger)selectedIndex{
++ (void)navigationRedDotSetTabBarToSelected:(UIViewController *)vc TabBar:(NSInteger)selectedIndex num:(int)num{
     NSInteger i = 2*selectedIndex + 1;
     UILabel *view = [[UILabel alloc]initWithFrame:CGRectMake(UI_SCREEN_W/10*i + 10, 5, 16, 16)];
     view.tag = selectedIndex + 888;
@@ -141,7 +141,7 @@
     view.layer.borderWidth = 1;
     view.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
     view.layer.cornerRadius = 8;
-    view.text = @"5";
+    view.text = [NSString stringWithFormat:@"%d",num];
     view.font = [UIFont systemFontOfSize:10];
     view.textColor = [UIColor whiteColor];
     view.textAlignment = NSTextAlignmentCenter;

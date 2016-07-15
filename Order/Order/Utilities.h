@@ -42,7 +42,7 @@
 + (float)stringHeight:(NSString *)str width:(float)width forfontSize:(CGFloat)fontSize;
 
 //tabBar创建小红点
-+ (void)navigationRedDotSetTabBarToSelected:(UIViewController *)vc TabBar:(NSInteger)selectedIndex;
++ (void)navigationRedDotSetTabBarToSelected:(UIViewController *)vc TabBar:(NSInteger)selectedIndex num:(int)num;
 //tabBar去除小红点
 + (void)removeRedDotGetTabBarToSelected:(NSInteger)selectedIndex onView:(UIViewController *)vc;
 
