@@ -472,15 +472,12 @@
                         <viewControllerLayoutGuide type="top" id="rbF-WU-3Az"/>
                         <viewControllerLayoutGuide type="bottom" id="lhG-4T-jMI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WVY-qK-4g8">
+                    <view key="view" alpha="0.98999999999999999" contentMode="scaleToFill" id="WVY-qK-4g8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backTest" translatesAutoresizingMaskIntoConstraints="NO" id="ucj-8E-sxT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.98999999999999999" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXf-iQ-ykN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M a r k  R o b e r t s o n" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVo-Nc-zIt">
                                         <rect key="frame" x="20" y="223" width="335" height="22"/>
@@ -716,14 +713,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lhG-4T-jMI" firstAttribute="top" secondItem="rXf-iQ-ykN" secondAttribute="bottom" id="AUX-NN-SA0"/>
+                            <constraint firstItem="lhG-4T-jMI" firstAttribute="top" secondItem="rXf-iQ-ykN" secondAttribute="bottom" constant="56" id="AUX-NN-SA0"/>
                             <constraint firstAttribute="trailing" secondItem="rXf-iQ-ykN" secondAttribute="trailing" id="OXp-R8-L9I"/>
                             <constraint firstItem="rXf-iQ-ykN" firstAttribute="top" secondItem="WVY-qK-4g8" secondAttribute="top" id="Sir-o8-FRg"/>
-                            <constraint firstAttribute="trailing" secondItem="ucj-8E-sxT" secondAttribute="trailing" id="bP9-CL-Avg"/>
-                            <constraint firstItem="ucj-8E-sxT" firstAttribute="leading" secondItem="WVY-qK-4g8" secondAttribute="leading" id="bTk-LX-pFD"/>
                             <constraint firstItem="rXf-iQ-ykN" firstAttribute="leading" secondItem="WVY-qK-4g8" secondAttribute="leading" id="pMc-sU-gn2"/>
-                            <constraint firstItem="ucj-8E-sxT" firstAttribute="top" secondItem="WVY-qK-4g8" secondAttribute="top" id="ppF-74-xiw"/>
-                            <constraint firstAttribute="bottom" secondItem="ucj-8E-sxT" secondAttribute="bottom" id="uar-kq-PGA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GhQ-hu-CeZ"/>
@@ -1602,7 +1595,6 @@
     </scenes>
     <resources>
         <image name="PopularLayer1" width="75" height="75"/>
-        <image name="backTest" width="343" height="553"/>
         <image name="blackBack" width="50" height="50"/>
         <image name="popularCell1" width="343" height="145"/>
         <image name="shop" width="11" height="11"/>

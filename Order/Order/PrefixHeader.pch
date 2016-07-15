@@ -25,5 +25,6 @@
 
 #import "Utilities.h"
 #import "Constants.h"
+#import "StorageMgr.h"
 
 #endif /* PrefixHeader_pch */
