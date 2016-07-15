@@ -87,8 +87,14 @@
     cell.textLab.text = dic[@"text"];
     
     NSDate * date = dic[@"time"];
-    NSString *timeSp = [NSString stringWithFormat:@"%dm ago",(int)([[NSDate date] timeIntervalSince1970] - [date timeIntervalSince1970]+0.5)];
-    cell.timeLab.text = timeSp;
+    int time = (int)([[NSDate date] timeIntervalSince1970] - [date timeIntervalSince1970]+0.5);
+    if (time > 60) {
+         cell.timeLab.text = [NSString stringWithFormat:@"%dm ago",time/60];
+    }else if (time == 0){
+         cell.timeLab.text = [NSString stringWithFormat:@"just now"];
+    }else {
+         cell.timeLab.text = [NSString stringWithFormat:@"%ds ago",time];
+    }
     
     return cell;
 }
@@ -135,33 +141,6 @@
         flag = NO;
     }
 }
-
-//- (void)textViewDidChange:(UITextView *)textView
-//{
-//    [textView flashScrollIndicators];   // 闪动滚动条
-//        CGRect frame = textView.frame;
-//        frame.size.height = [Utilities stringHeight:textView.text width:_textView.frame.size.width forfontSize:17] + 10;
-//    NSLog(@"h = %f",[Utilities stringHeight:textView.text width:_textView.frame.size.width forfontSize:17]);
-//        textView.frame = frame;
-//
-//    //---- 计算backView高度 ---- //
-//    CGSize size = CGSizeMake(UI_SCREEN_W-65, CGFLOAT_MAX);
-//    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:16],NSFontAttributeName, nil];
-//    CGFloat curheight = [textView.text boundingRectWithSize:size
-//                                                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-//                                                 attributes:dic
-//                                                    context:nil].size.height;
-//    CGFloat y = CGRectGetMaxY(self.backView.frame);
-//    if (curheight < 34) {
-//        self.backView.frame = CGRectMake(0, y - 50, UI_SCREEN_W, 50);
-//    }else if(curheight < 120){
-//        self.textView.scrollEnabled = YES;
-//        self.backView.frame = CGRectMake(0, y - textView.contentSize.height -10, UI_SCREEN_W,textView.contentSize.height+10);
-//    }else{
-//        self.textView.scrollEnabled = YES;
-//        return;
-//    }
-//}
 
 
 

@@ -9,7 +9,9 @@
 #import "HomeQuickViewController.h"
 #import "SearchViewController.h"
 
-@interface HomeQuickViewController ()<UIScrollViewDelegate>
+@interface HomeQuickViewController ()<UIScrollViewDelegate>{
+    float imageH;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) NSMutableArray *ImageArr;
 
@@ -28,16 +30,31 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(search)];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
+    imageH = (UI_SCREEN_W - 80)/4;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.scrollEnabled = YES;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.contentSize = CGSizeMake(imageH * 5 + 30 , 168);
+    self.scrollView.delegate = self;
+    
     _ImageArr = [NSMutableArray new];
 
+    if(_index == 0) {
         [_ImageArr addObject:@"PopularLayer2"];
         [_ImageArr addObject:@"PopularLayer3"];
         [_ImageArr addObject:@"PopularLayer1"];
         [_ImageArr addObject:@"PopularLayer4"];
         [_ImageArr addObject:@"PopularLayer5"];
+    }else if(_index == 1){
+        [_ImageArr addObject:@"PopularLayer4"];
+        [_ImageArr addObject:@"PopularLayer5"];
+        [_ImageArr addObject:@"PopularLayer2"];
+        [_ImageArr addObject:@"PopularLayer3"];
+        [_ImageArr addObject:@"PopularLayer1"];
+
+    }
     
-    
-    [self createSegmentedControl];
+    [self createImageViewSegmented];
     [self mapping];
     [self start:3];
 }
@@ -65,21 +82,22 @@
 }
 
 //滑动选项卡创建
-- (void)createSegmentedControl {
-    float imageH = (UI_SCREEN_W - 80)/4;
-    
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.scrollEnabled = YES;
-    self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.contentSize = CGSizeMake(imageH * 5 + 30 , 168);
-    self.scrollView.delegate = self;
+- (void)createImageViewSegmented {
     
     for (int i = 0; i < 5 ; i++) {
         UIImageView *heart = [[UIImageView alloc]initWithFrame:CGRectMake(i*(imageH + 20) - imageH/2, 44, imageH, imageH)];
+        heart.tag = i+10;
         heart.image = [UIImage imageNamed:_ImageArr[i]];
         heart.layer.cornerRadius = 40;
         heart.contentMode = UIViewContentModeScaleAspectFit;
         [self.scrollView addSubview:heart];
+    }
+}
+
+- (void)removeImageViewSegmented {
+    for (int i = 10; i < 15; i++) {
+        UIImageView *heart = [self.scrollView viewWithTag:i];
+        [heart removeFromSuperview];
     }
 }
 
@@ -135,7 +153,8 @@
      NSString *imageAtr = _ImageArr[0];
     [_ImageArr removeObjectAtIndex:0];
     [_ImageArr addObject:imageAtr];
-    [self createSegmentedControl];
+    [self removeImageViewSegmented];
+    [self createImageViewSegmented];
 }
 
 - (void) rightMoveImage {
@@ -152,7 +171,8 @@
     [_ImageArr addObject:imageAtr3];
     [_ImageArr addObject:imageAtr4];
     [_ImageArr addObject:imageAtr5];
-    [self createSegmentedControl];
+    [self removeImageViewSegmented];
+    [self createImageViewSegmented];
 }
 
 /*

@@ -12,6 +12,7 @@
 
 @interface FollowingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *objArr;
 
 @end
 
@@ -23,6 +24,13 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = NO;
+    
+    _objArr = [NSMutableArray new];
+    NSDictionary *dic1 = @{@"back":@"popularCell1",@"head":@"PopularLayer1",@"name":@"Mark Robertson",@"detial":@"San Francisco, California",@"star":@"4",@"reviews":@"8,095",@"id":@"0"};
+    NSDictionary *dic2 = @{@"back":@"popularCell2",@"head":@"PopularLayer2",@"name":@"Michael Jackson",@"detial":@"Indiana, Gary",@"star":@"3",@"reviews":@"7,986",@"id":@"1"};
+    [_objArr addObject:dic1];
+    [_objArr addObject:dic2];
+    [_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,15 +44,22 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return _objArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FollowingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell start:3];
-    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushCut)];
+    NSDictionary *dict = _objArr[indexPath.row];
+    cell.ImageView.image = [UIImage imageNamed:dict[@"back"]];
+    cell.popularLayerIV.image = [UIImage imageNamed:dict[@"head"]];
+    cell.nameLab.text = dict[@"name"];
+    cell.detialLab.text = dict[@"detial"];
+    cell.reviews.text = [NSString stringWithFormat:@"%@ reviews",dict[@"reviews"]];
+    [cell start:[dict[@"star"] intValue]];
+    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushCut:)];
     [cell.popularLayerIV addGestureRecognizer:tapGesture];
+    cell.popularLayerIV.tag = indexPath.row;
     return cell;
 }
 
@@ -52,8 +67,11 @@
 
 }
 
-- (void)pushCut {
+- (void)pushCut:(UITapGestureRecognizer *)gestureRecognizer {
+    UIView *image = gestureRecognizer.view;
+    NSDictionary *dict = _objArr[image.tag];
     HomeQuickViewController *HomeQuick = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"HomeQuick"];
+    HomeQuick.index = [dict[@"id"]intValue];
     [self.navigationController pushViewController:HomeQuick animated:NO];
 }
 /*

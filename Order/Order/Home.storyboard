@@ -1189,9 +1189,12 @@
                                         <connections>
                                             <outlet property="ImageView" destination="poy-8U-OvZ" id="S1B-Bf-bV1"/>
                                             <outlet property="backView" destination="AQ5-gr-Utv" id="dJh-xH-9lc"/>
+                                            <outlet property="detialLab" destination="2aI-Dl-REp" id="CPf-2m-ayo"/>
                                             <outlet property="followBut" destination="FLx-SH-CcO" id="TS0-wp-3xT"/>
                                             <outlet property="layerView" destination="3fQ-L0-IP3" id="W6W-QK-qAA"/>
+                                            <outlet property="nameLab" destination="tdf-ye-pLu" id="sZ9-oS-bg2"/>
                                             <outlet property="popularLayerIV" destination="ezQ-fu-xyd" id="F81-SE-gRi"/>
+                                            <outlet property="reviews" destination="9aU-tQ-t1Y" id="9iv-Yf-KRI"/>
                                             <outlet property="star1" destination="U7O-eO-6Bm" id="kCk-Ma-iwG"/>
                                             <outlet property="star2" destination="YcC-zN-ci3" id="X7j-IX-ch1"/>
                                             <outlet property="star3" destination="O7T-1E-HW3" id="l5h-Ra-RNu"/>
@@ -1397,9 +1400,12 @@
                                         <connections>
                                             <outlet property="ImageView" destination="GE6-qI-zJb" id="lqj-82-VBa"/>
                                             <outlet property="backView" destination="0fN-a2-j6c" id="zf3-yo-rN5"/>
+                                            <outlet property="detialLab" destination="LNQ-qb-XX9" id="JjC-4X-Hih"/>
                                             <outlet property="followBut" destination="s6P-tC-FHp" id="vX7-Cx-qv7"/>
                                             <outlet property="layerView" destination="euj-Yr-a2O" id="9yF-53-vY2"/>
+                                            <outlet property="nameLab" destination="upo-Na-olg" id="4ve-U1-Ia3"/>
                                             <outlet property="popularLayerIV" destination="cgn-gt-OUR" id="VBi-ha-Oiu"/>
+                                            <outlet property="reviews" destination="Vpj-fI-8i1" id="9PB-Fu-Nd0"/>
                                             <outlet property="star1" destination="Bzh-mi-41i" id="chp-GQ-K5r"/>
                                             <outlet property="star2" destination="amo-uv-d15" id="dEa-xa-gaC"/>
                                             <outlet property="star3" destination="ifJ-cj-iy2" id="YGk-mN-SsL"/>
@@ -1605,9 +1611,12 @@
                                         <connections>
                                             <outlet property="ImageView" destination="YU4-F7-KhO" id="KVq-GK-0uc"/>
                                             <outlet property="backView" destination="5Cv-Eu-wyb" id="ymN-cH-BTT"/>
+                                            <outlet property="detialLab" destination="JKc-YO-rL2" id="SwN-sB-gZP"/>
                                             <outlet property="followBut" destination="g17-zD-4Fo" id="8qK-J7-aaS"/>
                                             <outlet property="layerView" destination="f7b-Uh-EPh" id="GAi-FC-f6y"/>
+                                            <outlet property="nameLab" destination="7Qv-6j-lS8" id="dP6-zF-42a"/>
                                             <outlet property="popularLayerIV" destination="VSh-pq-qct" id="i4w-3I-G1e"/>
+                                            <outlet property="reviews" destination="SkC-ox-tqs" id="4Lx-D1-f3p"/>
                                             <outlet property="star1" destination="cwX-My-rkr" id="zHm-dQ-EhZ"/>
                                             <outlet property="star2" destination="617-dD-c3R" id="Qri-G9-8ng"/>
                                             <outlet property="star3" destination="apT-EY-aLX" id="Zgj-pi-pjO"/>
