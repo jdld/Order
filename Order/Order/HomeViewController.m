@@ -12,6 +12,7 @@
 #import "SellersViewController.h"
 #import "FollowingViewController.h"
 #import "SearchViewController.h"
+#import "HomeQuickViewController.h"
 #import <HMSegmentedControl.h>
 
 @interface HomeViewController (){
@@ -52,9 +53,26 @@
     _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H)];
     _backView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showQuick) name:@"quick" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(createQuickView) name:@"createQuick" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeQuickView) name:@"removeQuick" object:nil];
     
     [Utilities navigationRedDotSetTabBarToSelected:self TabBar:2 num:2];
+}
+
+- (void) createQuickView {
+    self.tabBarController.tabBar.hidden = YES;
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H)];
+    view.tag = 10086;
+    HomeQuickViewController *HomeQuick = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"HomeQuick"];
+    [self addChildViewController:HomeQuick];
+    [view addSubview:HomeQuick.view];
+    [self.view addSubview:view];
+}
+
+- (void) removeQuickView {
+    UIView *view = [self.view viewWithTag:10086];
+    [view removeFromSuperview];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 //滑动选项卡创建
@@ -127,9 +145,6 @@
     [self.navigationController pushViewController:Search animated:YES];
 }
 
-- (void)showQuick {
-    //[self.view addSubview:_backView];
-}
 /*
  #pragma mark - Navigation
  

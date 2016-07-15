@@ -82,9 +82,9 @@
 - (void)pushCut:(UITapGestureRecognizer *)gestureRecognizer {
     UIView *image = gestureRecognizer.view;
     NSDictionary *dict = _objArr[image.tag];
-    HomeQuickViewController *HomeQuick = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"HomeQuick"];
-    HomeQuick.index = [dict[@"id"]intValue];
-    [self.navigationController pushViewController:HomeQuick animated:NO];
+    [[StorageMgr singletonStorageMgr]addKey:@"quickId" andValue:dict[@"id"]];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"createQuick" object:nil];
+    
 }
 
 @end

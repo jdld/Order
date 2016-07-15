@@ -11,6 +11,7 @@
 
 @interface HomeQuickViewController ()<UIScrollViewDelegate>{
     float imageH;
+    NSString *infoStr;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) NSMutableArray *ImageArr;
@@ -22,14 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Home";
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"more"] style:UIBarButtonItemStylePlain target:self action:@selector(more)];
-    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(search)];
-    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
-    
     imageH = (UI_SCREEN_W - 80)/4;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.scrollEnabled = YES;
@@ -37,26 +30,33 @@
     self.scrollView.contentSize = CGSizeMake(imageH * 5 + 30 , 168);
     self.scrollView.delegate = self;
     
+    [self createImageView:[[StorageMgr singletonStorageMgr]objectForKey:@"quickId"]];
+    [[StorageMgr singletonStorageMgr]removeObjectForKey:@"quickId"];
+}
+
+- (void) createImageView:(NSString *)str {
     _ImageArr = [NSMutableArray new];
-
-    if(_index == 0) {
+    
+    NSString *idStr = str;
+    if([idStr intValue] == 0) {
         [_ImageArr addObject:@"PopularLayer2"];
         [_ImageArr addObject:@"PopularLayer3"];
         [_ImageArr addObject:@"PopularLayer1"];
         [_ImageArr addObject:@"PopularLayer4"];
         [_ImageArr addObject:@"PopularLayer5"];
-    }else if(_index == 1){
+        [self start:4];
+    }else if([idStr intValue] == 1){
         [_ImageArr addObject:@"PopularLayer4"];
         [_ImageArr addObject:@"PopularLayer5"];
         [_ImageArr addObject:@"PopularLayer2"];
         [_ImageArr addObject:@"PopularLayer3"];
         [_ImageArr addObject:@"PopularLayer1"];
-
+        [self start:3];
     }
     
     [self createImageViewSegmented];
     [self mapping];
-    [self start:3];
+    
 }
 
 - (void) mapping {
@@ -140,10 +140,8 @@
     float maxminOffset = scrollView.contentSize.width;
     float offset = maxminOffset - currentOffset;
     if (offset > 65) {
-        NSLog(@"右移 = %f",offset);
         [self rightMoveImage];
     }else if (offset < -65){
-        NSLog(@"左移 = %f",offset);
         [self leftMoveImage];
     }
     
@@ -186,6 +184,6 @@
 */
 
 - (IBAction)backAction:(UIButton *)sender forEvent:(UIEvent *)event {
-    [self.navigationController popViewControllerAnimated:NO];
+   [[NSNotificationCenter defaultCenter]postNotificationName:@"removeQuick" object:nil];
 }
 @end
