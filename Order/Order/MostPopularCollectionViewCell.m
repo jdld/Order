@@ -16,7 +16,7 @@
     buynowBtn.layer.cornerRadius = 5;
     buynowBtn.layer.borderColor = UIColorFromRGB(50, 122, 220).CGColor;
     buynowBtn.layer.borderWidth = 2;
-    _headImage.layer.cornerRadius = 5;
+//    _headImage.layer.cornerRadius = 5;
 }
 
 - (void)setDeals:(DealsModel *)deals {

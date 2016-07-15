@@ -55,7 +55,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qrS-gQ-0dq">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail_img1" translatesAutoresizingMaskIntoConstraints="NO" id="qrS-gQ-0dq">
                         <rect key="frame" x="0.0" y="0.0" width="194" height="130"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="130" id="cFV-HS-5Aq"/>
@@ -100,4 +100,7 @@
             <point key="canvasLocation" x="265" y="311.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="detail_img1" width="327" height="220"/>
+    </resources>
 </document>

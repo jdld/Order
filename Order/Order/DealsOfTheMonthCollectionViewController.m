@@ -42,17 +42,17 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSArray *)dealsArr {
     if (_dealsArr == nil) {
         DealsModel *model1 = [[DealsModel alloc] init];
-        model1.headImage = @"demo1";
+        model1.headImage = @"detail_img3";
         model1.title = @"White City Bike";
         model1.detailsTitle = @"Be free, be more active. You have a chance to do that with this cool bike.";
         model1.price = @"$499.95";
         DealsModel *model2 = [[DealsModel alloc] init];
-        model2.headImage = @"demo2";
+        model2.headImage = @"detail_img2";
         model2.title = @"Happy Hugs Coffee Cup";
         model2.detailsTitle = @"Cool coffee cup for the sad rainy days. Buy this and improve your life.";
         model2.price = @"$99.9";
         DealsModel *model3 = [[DealsModel alloc] init];
-        model3.headImage = @"demo3";
+        model3.headImage = @"detail_img1";
         model3.title = @"Designer's Desk";
         model3.detailsTitle = @"Perfect your home office.";
         model3.price = @"$324.95";
