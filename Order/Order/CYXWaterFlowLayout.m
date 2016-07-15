@@ -134,7 +134,7 @@ static const UIEdgeInsets CYXDefaultEdgeInsets = {10, 10, 10, 10};
     
     // 设置布局属性的frame
     CGFloat w = (collectionViewW - self.edgeInsets.left - self.edgeInsets.right - (self.columnCount - 1) * self.columnMargin) / self.columnCount;
-    CGFloat h = [self.delegate waterflowLayout:self heightForItemAtIndex:indexPath.item itemWidth:w];
+    CGFloat h = [self.delegate waterflowLayout:self heightForItemAtIndex:indexPath.item itemWidth:w itemIndexPath:indexPath];
     
     // 找出高度最短的那一列
     NSInteger destColumn = 0;

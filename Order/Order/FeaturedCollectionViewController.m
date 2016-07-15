@@ -10,8 +10,9 @@
 #import "MostPopularCollectionViewCell.h"
 #import "DealsModel.h"
 #import "CYXWaterFlowLayout.h"
+#import "DetialViewController.h"
 
-@interface FeaturedCollectionViewController ()<UICollectionViewDataSource,CYXWaterFlowLayoutDelegate>
+@interface FeaturedCollectionViewController ()<UICollectionViewDataSource,CYXWaterFlowLayoutDelegate, UICollectionViewDelegate>
 @property (strong, nonatomic) NSArray<DealsModel *> *dealsArr;
 @property (nonatomic, weak) UICollectionView *collectionView;
 @end
@@ -67,11 +68,13 @@ static NSString * const reuseIdentifier = @"Cell";
     layout.delegate = self;
     
     // 创建CollectionView
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:    CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64) collectionViewLayout:layout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:    CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 146) collectionViewLayout:layout];
     collectionView.backgroundColor = UIColorFromRGB(248, 248, 248);
     collectionView.dataSource = self;
+    collectionView.delegate = self;
     [self.view addSubview:collectionView];
     self.collectionView = collectionView;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MostPopularCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
@@ -95,7 +98,7 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.deals = self.dealsArr[indexPath.row];
     cell.layer.masksToBounds = NO;
     cell.layer.shadowOffset = CGSizeMake(0, 1);
-    cell.layer.shadowOpacity = 0.1f;
+    cell.layer.shadowOpacity = 0.2f;
     //    [cell systemLayoutSizeFittingSize:CGSizeMake(cell.frame.size.width, cell.frame.size.height)];
     
     return cell;
@@ -110,25 +113,36 @@ static NSString * const reuseIdentifier = @"Cell";
 //    return CGSizeMake((UI_SCREEN_W - 30) / 2, height);
 //}
 //
-//#pragma mark <UICollectionViewDelegate>
-//
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    NSLog(@"------%zd", indexPath.item);
-//}
+#pragma mark <UICollectionViewDelegate>
 
-- (CGFloat)waterflowLayout:(CYXWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //        DealsModel *model = self.dealsArr[indexPath.row];
-    //        CGFloat titleHeight = [Utilities stringHeight:model.title width:UI_SCREEN_W - 60 forfontSize:16];
-    //        CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:UI_SCREEN_W - 60 forfontSize:12];
-    //        CGFloat height = titleHeight + detailsHeight + 257;
-    return 380;
+    NSLog(@"------%zd", indexPath.item);
+    DetialViewController *Detial = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"Detial"];
+    DealsModel *model = self.dealsArr[indexPath.row];
+    NSDictionary *dict = @{@"image":model.headImage,
+                           @"name":model.title,
+                           @"detial":model.detailsTitle,
+                           @"much":model.price};
+    Detial.dict = dict;
+    [self.navigationController pushViewController:Detial animated:YES];
+}
+
+- (CGFloat)waterflowLayout:(CYXWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth itemIndexPath:(NSIndexPath *)indexPath {
+    DealsModel *model = self.dealsArr[indexPath.row];
+    CGFloat titleHeight = [Utilities stringHeight:model.title width:itemWidth - 36 forfontSize:16];
+    CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:itemWidth - 50 forfontSize:12];
+    CGFloat height = titleHeight + detailsHeight + 258;
+    return height;
 }
 
 - (CGFloat)rowMarginInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout
 {
-    return 10;
+    return 15;
+}
+
+- (CGFloat)columnMarginInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout {
+    return 15;
 }
 
 - (CGFloat)columnCountInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout
@@ -138,8 +152,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UIEdgeInsets)edgeInsetsInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout
 {
-    return UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsMake(15, 15, 15, 15);
 }
-
 
 @end

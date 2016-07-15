@@ -13,7 +13,7 @@
 
 @protocol CYXWaterFlowLayoutDelegate <NSObject>
 @required
-- (CGFloat)waterflowLayout:(CYXWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth;
+- (CGFloat)waterflowLayout:(CYXWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth itemIndexPath:(NSIndexPath *)indexPath;
 
 @optional
 - (CGFloat)columnCountInWaterflowLayout:(CYXWaterFlowLayout *)waterflowLayout;
