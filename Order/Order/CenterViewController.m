@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self UIAutoLaout];
+    [Utilities removeRedDotGetTabBarToSelected:2 onView:self];
 }
 
 - (void)didReceiveMemoryWarning {
