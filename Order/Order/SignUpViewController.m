@@ -160,6 +160,8 @@
     _signUp.backgroundColor = [UIColor clearColor];
     _signUp.layer.cornerRadius = 3;
     _signUp.layer.borderWidth = 1;
+    _signUp.layer.shadowOffset = CGSizeMake(0, 1);
+    _signUp.layer.shadowOpacity = 0.2f;
     _signUp.layer.borderColor = UIColorFromRGB(146, 157, 230).CGColor;
     _signUp.titleLabel.font = [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:20];
     [_signUp setTitle:@"R E G I S T E R" forState:UIControlStateNormal];

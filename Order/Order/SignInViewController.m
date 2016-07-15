@@ -122,6 +122,8 @@
     _signIn.layer.cornerRadius = 3;
     _signIn.layer.borderWidth = 1;
     _signIn.layer.borderColor = UIColorFromRGB(146, 157, 230).CGColor;
+    _signIn.layer.shadowOffset = CGSizeMake(0, 1);
+    _signIn.layer.shadowOpacity = 0.2f;
     _signIn.titleLabel.font = [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:20];
     [_signIn setTitle:@"L O G I N" forState:UIControlStateNormal];
     [_signIn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
