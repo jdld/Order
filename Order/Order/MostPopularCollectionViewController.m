@@ -10,8 +10,9 @@
 #import "MostPopularCollectionViewCell.h"
 #import "DealsModel.h"
 #import "CYXWaterFlowLayout.h"
+#import "DetialViewController.h"
 
-@interface MostPopularCollectionViewController ()<UICollectionViewDataSource,CYXWaterFlowLayoutDelegate>
+@interface MostPopularCollectionViewController ()<UICollectionViewDataSource,CYXWaterFlowLayoutDelegate, UICollectionViewDelegate>
 @property (strong, nonatomic) NSArray<DealsModel *> *dealsArr;
 @property (nonatomic, weak) UICollectionView *collectionView;
 @end
@@ -54,8 +55,23 @@ static NSString * const reuseIdentifier = @"Cell";
         model3.headImage = @"demo3";
         model3.title = @"Designer's Desk";
         model3.detailsTitle = @"Perfect your home office.";
-        model1.price = @"$324.95";
-        _dealsArr = @[model1, model2, model3];
+        model3.price = @"$324.95";
+        DealsModel *model4 = [[DealsModel alloc] init];
+        model4.headImage = @"demo1";
+        model4.title = @"White City Bike";
+        model4.detailsTitle = @"Be free, be more active. You have a chance to do that with this cool bike.";
+        model4.price = @"$499.95";
+        DealsModel *model5 = [[DealsModel alloc] init];
+        model5.headImage = @"demo2";
+        model5.title = @"Happy Hugs Coffee Cup";
+        model5.detailsTitle = @"Cool coffee cup for the sad rainy days. Buy this and improve your life.";
+        model5.price = @"$99.9";
+        DealsModel *model6 = [[DealsModel alloc] init];
+        model6.headImage = @"demo3";
+        model6.title = @"Designer's Desk";
+        model6.detailsTitle = @"Perfect your home office.";
+        model6.price = @"$324.95";
+        _dealsArr = @[model1, model2, model3, model4, model5, model6];
     }
     
     return _dealsArr;
@@ -67,11 +83,13 @@ static NSString * const reuseIdentifier = @"Cell";
     layout.delegate = self;
     
     // 创建CollectionView
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:    CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64) collectionViewLayout:layout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:    CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) collectionViewLayout:layout];
     collectionView.backgroundColor = UIColorFromRGB(248, 248, 248);
     collectionView.dataSource = self;
+    collectionView.delegate = self;
     [self.view addSubview:collectionView];
-        self.collectionView = collectionView;
+    self.collectionView = collectionView;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MostPopularCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
 
@@ -110,12 +128,20 @@ static NSString * const reuseIdentifier = @"Cell";
 //    return CGSizeMake((UI_SCREEN_W - 30) / 2, height);
 //}
 //
-//#pragma mark <UICollectionViewDelegate>
-//
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    NSLog(@"------%zd", indexPath.item);
-//}
+#pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"------%zd", indexPath.item);
+    DetialViewController *Detial = [Utilities getStoryboardInstanceByIdentity:@"Home" byIdentity:@"Detial"];
+    DealsModel *model = self.dealsArr[indexPath.row];
+    NSDictionary *dict = @{@"image":model.headImage,
+                           @"name":model.title,
+                           @"detial":model.detailsTitle,
+                           @"much":model.price};
+    Detial.dict = dict;
+    [self.navigationController pushViewController:Detial animated:YES];
+}
 
 - (CGFloat)waterflowLayout:(CYXWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth
 {

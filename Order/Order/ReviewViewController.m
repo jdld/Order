@@ -41,7 +41,7 @@
         model2.commodityName = @"B&O PLAY BeoPlay H8";
         model2.commodityMsg = @"wireless On-Ear Headphones";
         model2.price = @"499.95";
-        model2.quantity = @"2";
+        model2.quantity = @"1";
         CurrentOrderModel *model3 = [[CurrentOrderModel alloc] init];
         model3.headImage = @"Layer11";
         model3.nickname = @"Lisa Donovan";
@@ -49,7 +49,7 @@
         model3.commodityName = @"B&O PLAY BeoPlay H8";
         model3.commodityMsg = @"wireless On-Ear Headphones";
         model3.price = @"349.95";
-        model3.quantity = @"2";
+        model3.quantity = @"4";
         CurrentOrderModel *model4 = [[CurrentOrderModel alloc] init];
         model4.headImage = @"Layer22";
         model4.nickname = @"Lisa Donovan";
@@ -57,7 +57,7 @@
         model4.commodityName = @"B&O PLAY BeoPlay H8";
         model4.commodityMsg = @"wireless On-Ear Headphones";
         model4.price = @"123.95";
-        model4.quantity = @"2";
+        model4.quantity = @"1";
         CurrentOrderModel *model5 = [[CurrentOrderModel alloc] init];
         model5.headImage = @"Layer22";
         model5.nickname = @"Lisa Donovan";
@@ -65,7 +65,7 @@
         model5.commodityName = @"B&O PLAY BeoPlay H8";
         model5.commodityMsg = @"wireless On-Ear Headphones";
         model5.price = @"734.95";
-        model5.quantity = @"2";
+        model5.quantity = @"3";
         _arr = @[model1, model2, model3, model4, model5];
     }
     return _arr;
@@ -88,7 +88,7 @@
 //    [_tableView autoPinEdgesToSuperviewEdges];
     self.returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc] initWithViewController:self];
     self.returnKeyHandler.lastTextFieldReturnKeyType = UIReturnKeyDone;
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -184,7 +184,7 @@
         
         UILabel *label = [[UILabel alloc] init];
         label.textColor = UIColorFromRGB(50, 122, 229);
-        label.text = @"R E V I E W  O R D E R:";
+        label.text = @"REVIEW ORDER:";
         label.font = UIFont_small;
         [view addSubview:label];
         
@@ -247,6 +247,7 @@
         for (CurrentOrderModel *model in self.arr) {
             NSString *priceStr = model.price;
             float priceFloat = [priceStr floatValue];
+            priceFloat *= [model.quantity floatValue];
             price += priceFloat;
         }
         

@@ -24,14 +24,14 @@
 - (void)setCurrentOrder:(CurrentOrderModel *)currentOrder {
     _photoImage.image = [UIImage imageNamed:currentOrder.headImage];
     _nickname.text = currentOrder.nickname;
-    _nickname.font = UIFont_mid;
+    _nickname.font = UIFont_small;
     _commodityImage.image = [UIImage imageNamed:currentOrder.commodityImage];
     _commodityName.text = currentOrder.commodityName;
-    _commodityName.font = UIFont_big;
+    _commodityName.font = UIFont_mid;
     _commodityMsg.text = currentOrder.commodityMsg;
-    _commodityMsg.font = UIFont_mid;
+    _commodityMsg.font = UIFont_small;
     _priceLbl.text = currentOrder.price;
-    _priceLbl.font = UIFont_big;
+    _priceLbl.font = UIFont_mid;
     _quantityLbl.text = currentOrder.quantity;
     _quantityLbl.font = UIFont_small;
 }

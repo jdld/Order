@@ -15,10 +15,15 @@
 #define iPhone6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
 // 判断是否为iPhone 6Plus/6sPlus
 #define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
+#define IS_IPHONE_6PLUS (IS_IPHONE && [[UIScreenmainScreen] nativeScale] == 3.0f)
+//各分辨率下宽高比例
+#define fitScreenWidth(width) width * (UI_SCREEN_W / 320)
+#define fitScreenHeight(height) height * (UI_SCREEN_H / 568)
 
-#define UIFont_small iPhone5SE?[UIFont systemFontOfSize:8]:iPhone6_6s?[UIFont systemFontOfSize:10]:iPhone6Plus_6sPlus?[UIFont systemFontOfSize:12]:[UIFont systemFontOfSize:7]
-#define UIFont_mid iPhone5SE?[UIFont systemFontOfSize:12]:iPhone6_6s?[UIFont systemFontOfSize:14]:iPhone6Plus_6sPlus?[UIFont systemFontOfSize:16]:[UIFont systemFontOfSize:10]
-#define UIFont_big iPhone5SE?[UIFont systemFontOfSize:16]:iPhone6_6s?[UIFont systemFontOfSize:18]:iPhone6Plus_6sPlus?[UIFont systemFontOfSize:20]:[UIFont systemFontOfSize:13]
+#define UIFont_small iPhone5SE?[UIFont systemFontOfSize:9]:iPhone6_6s?[UIFont systemFontOfSize:11]:iPhone6Plus_6sPlus?[UIFont systemFontOfSize:13]:[UIFont systemFontOfSize:9]
+#define UIFont_mid iPhone5SE?[UIFont systemFontOfSize:12]:iPhone6_6s?[UIFont systemFontOfSize:14]:iPhone6Plus_6sPlus?[UIFont systemFontOfSize:16]:[UIFont systemFontOfSize:11]
+#define UIFont_big iPhone5SE?[UIFont systemFontOfSize:16]:iPhone6_6s?[UIFont systemFontOfSize:18]:iPhone6Plus_6sPlus?[UIFont systemFontOfSize:20]:[UIFont systemFontOfSize:14]
+#define UIFont_xbig iPhone5SE?[UIFont systemFontOfSize:19]:iPhone6_6s?[UIFont systemFontOfSize:22]:iPhone6Plus_6sPlus?[UIFont systemFontOfSize:25]:[UIFont systemFontOfSize:18]
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

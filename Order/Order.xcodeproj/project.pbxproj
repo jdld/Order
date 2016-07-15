@@ -37,6 +37,7 @@
 		B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */; };
 		B8815F501D37571900C633CB /* PaymentDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */; };
 		B8815F531D3775FC00C633CB /* CYXWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F521D3775FC00C633CB /* CYXWaterFlowLayout.m */; };
+		B8906CAE1D386C9D009DDCCE /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8906CAD1D386C9D009DDCCE /* RootTabBarViewController.m */; };
 		B8A9AAF11D3622B000FFF520 /* FeaturedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF01D3622B000FFF520 /* FeaturedTableViewCell.m */; };
 		B8A9AAF41D36254400FFF520 /* SellersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF31D36254400FFF520 /* SellersTableViewCell.m */; };
 		B8A9AAF71D3625E400FFF520 /* FollowingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A9AAF61D3625E400FFF520 /* FollowingTableViewCell.m */; };
@@ -143,6 +144,8 @@
 		B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsTableViewCell.m; sourceTree = "<group>"; };
 		B8815F511D3775FC00C633CB /* CYXWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXWaterFlowLayout.h; sourceTree = "<group>"; };
 		B8815F521D3775FC00C633CB /* CYXWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYXWaterFlowLayout.m; sourceTree = "<group>"; };
+		B8906CAC1D386C9D009DDCCE /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		B8906CAD1D386C9D009DDCCE /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
 		B8A9AAEF1D3622B000FFF520 /* FeaturedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedTableViewCell.h; sourceTree = "<group>"; };
 		B8A9AAF01D3622B000FFF520 /* FeaturedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedTableViewCell.m; sourceTree = "<group>"; };
 		B8A9AAF21D36254400FFF520 /* SellersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellersTableViewCell.h; sourceTree = "<group>"; };
@@ -367,6 +370,8 @@
 				B82BE75F1D2DE6D900AF7091 /* TabBarViewController.m */,
 				B8C6E3251D3489F500E31B7F /* NavigationController.h */,
 				B8C6E3261D3489F500E31B7F /* NavigationController.m */,
+				B8906CAC1D386C9D009DDCCE /* RootTabBarViewController.h */,
+				B8906CAD1D386C9D009DDCCE /* RootTabBarViewController.m */,
 			);
 			name = TabBar;
 			sourceTree = "<group>";
@@ -815,6 +820,7 @@
 				B8BBE51F1D3619CE006E7AA8 /* PXAutoHeightTextView.m in Sources */,
 				B8BBE5121D35CF0A006E7AA8 /* CurrentOrderModel.m in Sources */,
 				B82BE7881D2DF84200AF7091 /* OtherViewController.m in Sources */,
+				B8906CAE1D386C9D009DDCCE /* RootTabBarViewController.m in Sources */,
 				B82BE7751D2DE78700AF7091 /* CenterViewController.m in Sources */,
 				B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */,
 				B8ED54F81D34DE84006FEA51 /* AskQuestionTableViewCell.m in Sources */,

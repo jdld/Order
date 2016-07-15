@@ -41,33 +41,33 @@
     _icon.image = [UIImage imageNamed:@"icon"];
     [self.view addSubview:_icon];
     
-    [_icon autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view withOffset:60];
+    [_icon autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view withOffset:fitScreenHeight(48)];
     [_icon autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
-    [_icon autoSetDimension:ALDimensionWidth toSize:120];
-    [_icon autoSetDimension:ALDimensionHeight toSize:120];
+    [_icon autoSetDimension:ALDimensionWidth toSize:fitScreenWidth(90)];
+    [_icon autoSetDimension:ALDimensionHeight toSize:fitScreenWidth(90)];
     
     _iconName = [[UILabel alloc]init];
     _iconName.text = @"Order";
     _iconName.textColor = [UIColor whiteColor];
-    _iconName.font = [UIFont systemFontOfSize:28];
+    _iconName.font = UIFont_xbig;
     _iconName.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_iconName];
     
-    [_iconName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_icon withOffset:5];
+    [_iconName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_icon withOffset:fitScreenHeight(4)];
     [_iconName autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
     [_iconName autoConstrainAttribute:ALAttributeWidth toAttribute:ALAttributeWidth ofView:_icon withMultiplier:1];
-    [_iconName autoSetDimension:ALDimensionHeight toSize:44];
+    [_iconName autoSetDimension:ALDimensionHeight toSize:fitScreenHeight(35)];
     
     _detail = [[UILabel alloc]init];
     _detail.text = @"Be part of a great shopping experience.";
     _detail.textColor = [UIColor whiteColor];
-    _detail.font = [UIFont systemFontOfSize:28];
+    _detail.font = UIFont_xbig;
     _detail.textAlignment = NSTextAlignmentCenter;
     _detail.numberOfLines = 0;
     [self.view addSubview:_detail];
     [_detail autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
     [_detail autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view];
-    [_detail autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:65];
+    [_detail autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:fitScreenWidth(52)];
 //    [_detail autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:50];
     
     _login = [[UIButton alloc]init];
@@ -82,7 +82,7 @@
     [_login autoConstrainAttribute:ALAttributeLeft toAttribute:ALAttributeLeft ofView:self.view];
     [_login autoConstrainAttribute:ALAttributeBottom toAttribute:ALAttributeBottom ofView:self.view];
     [_login autoConstrainAttribute:ALAttributeWidth toAttribute:ALAttributeWidth ofView:self.view withMultiplier:0.5];
-    [_login autoSetDimension:ALDimensionHeight toSize:60];
+    [_login autoSetDimension:ALDimensionHeight toSize:fitScreenHeight(48)];
 
 
     _signUp = [[UIButton alloc]init];

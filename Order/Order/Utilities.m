@@ -141,7 +141,7 @@
     view.layer.borderWidth = 1;
     view.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
     view.layer.cornerRadius = 8;
-    view.text = @"2";
+    view.text = @"5";
     view.font = [UIFont systemFontOfSize:10];
     view.textColor = [UIColor whiteColor];
     view.textAlignment = NSTextAlignmentCenter;
