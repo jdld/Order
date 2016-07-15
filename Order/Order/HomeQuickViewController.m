@@ -44,17 +44,19 @@
         [_ImageArr addObject:@"PopularLayer1"];
         [_ImageArr addObject:@"PopularLayer4"];
         [_ImageArr addObject:@"PopularLayer5"];
+        [self start:4];
     }else if([idStr intValue] == 1){
         [_ImageArr addObject:@"PopularLayer4"];
         [_ImageArr addObject:@"PopularLayer5"];
         [_ImageArr addObject:@"PopularLayer2"];
         [_ImageArr addObject:@"PopularLayer3"];
         [_ImageArr addObject:@"PopularLayer1"];
+        [self start:3];
     }
     
     [self createImageViewSegmented];
     [self mapping];
-    [self start:3];
+    
 }
 
 - (void) mapping {

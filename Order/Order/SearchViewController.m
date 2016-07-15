@@ -38,9 +38,9 @@
 }
 
 - (void)createIntoData {
-    NSDictionary *dic1 = @{@"image":@"shop1",@"name":@"Beats Solo 2",@"detial":@"Wireless On Ear Headphones - Gold",@"much":@"299.95"};
-    NSDictionary *dic2 = @{@"image":@"shop2",@"name":@"B&O PLAY BeoPlay H8",@"detial":@"Wireless On-Ear Headphones",@"much":@"499.95"};
-    NSDictionary *dic3 = @{@"image":@"shop3",@"name":@"Master & Dynamic MH40",@"detial":@"Over-Ear Headphones - Brown",@"much":@"399.95"};
+    NSDictionary *dic1 = @{@"image":@"shop1",@"name":@"Beats Solo 2",@"detial":@"Wireless On Ear Headphones - Gold",@"much":@"$299.95"};
+    NSDictionary *dic2 = @{@"image":@"shop2",@"name":@"B&O PLAY BeoPlay H8",@"detial":@"Wireless On-Ear Headphones",@"much":@"$499.95"};
+    NSDictionary *dic3 = @{@"image":@"shop3",@"name":@"Master & Dynamic MH40",@"detial":@"Over-Ear Headphones - Brown",@"much":@"$399.95"};
     
     [_objArr addObject:dic1];
     [_objArr addObject:dic2];
