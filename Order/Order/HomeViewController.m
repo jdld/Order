@@ -54,7 +54,7 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showQuick) name:@"quick" object:nil];
     
-    [Utilities navigationRedDotSetTabBarToSelected:self TabBar:2];
+    [Utilities navigationRedDotSetTabBarToSelected:self TabBar:2 num:2];
 }
 
 //滑动选项卡创建
