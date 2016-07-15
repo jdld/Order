@@ -56,22 +56,22 @@
     _icon.image = [UIImage imageNamed:@"icon"];
     [_bgIV addSubview:_icon];
     
-    [_icon autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_bgIV withOffset:45];
+    [_icon autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_bgIV withOffset:fitScreenHeight(35)];
     [_icon autoAlignAxis:ALAxisVertical toSameAxisOfView:_bgIV];
-    [_icon autoSetDimension:ALDimensionWidth toSize:75];
-    [_icon autoSetDimension:ALDimensionHeight toSize:75];
+    [_icon autoSetDimension:ALDimensionWidth toSize:fitScreenWidth(60)];
+    [_icon autoSetDimension:ALDimensionHeight toSize:fitScreenWidth(60)];
     
     _titleLbl = [[UILabel alloc]init];
     _titleLbl.text = @"REGISTER";
     _titleLbl.textColor = [UIColor whiteColor];
-    _titleLbl.font = [UIFont systemFontOfSize:16];
+    _titleLbl.font = UIFont_mid;
     _titleLbl.textAlignment = NSTextAlignmentCenter;
     [_bgIV addSubview:_titleLbl];
     
-    [_titleLbl autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_icon withOffset:5];
+    [_titleLbl autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_icon withOffset:fitScreenHeight(4)];
     [_titleLbl autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
     [_titleLbl autoConstrainAttribute:ALAttributeWidth toAttribute:ALAttributeWidth ofView:_icon withMultiplier:1];
-    [_titleLbl autoSetDimension:ALDimensionHeight toSize:30];
+    [_titleLbl autoSetDimension:ALDimensionHeight toSize:fitScreenHeight(24)];
     
     _username = [[UITextField alloc]init];
     _username.placeholder = @"Input Username";
@@ -80,10 +80,10 @@
     _username.lx_placeholderColor = [UIColor whiteColor];
     [_bgIV addSubview:_username];
     
-    [_username autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:30];
-    [_username autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:30];
-    [_username autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_titleLbl withOffset:65];
-    [_username autoSetDimension:ALDimensionHeight toSize:50];
+    [_username autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:fitScreenWidth(24)];
+    [_username autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:fitScreenWidth(24)];
+    [_username autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_titleLbl withOffset:fitScreenHeight(51)];
+    [_username autoSetDimension:ALDimensionHeight toSize:fitScreenHeight(39)];
     
     UIView *sepView1 = [[UIView alloc] init];
     sepView1.backgroundColor = UIColorFromRGB(146, 157, 230);
@@ -91,7 +91,7 @@
     
     [sepView1 autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_username];
     [sepView1 autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_username];
-    [sepView1 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_username withOffset:5];
+    [sepView1 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_username withOffset:fitScreenHeight(4)];
     [sepView1 autoSetDimension:ALDimensionHeight toSize:1.0f];
     
     _email = [[UITextField alloc]init];
@@ -103,7 +103,7 @@
     
     [_email autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:sepView1];
     [_email autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:sepView1];
-    [_email autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView1 withOffset:10];
+    [_email autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView1 withOffset:fitScreenHeight(8)];
     
     UIView *sepView2 = [[UIView alloc] init];
     sepView2.backgroundColor = UIColorFromRGB(146, 157, 230);
@@ -111,7 +111,7 @@
     
     [sepView2 autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_email];
     [sepView2 autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_email];
-    [sepView2 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_email withOffset:5];
+    [sepView2 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_email withOffset:fitScreenHeight(4)];
     
     _password = [[UITextField alloc]init];
     _password.placeholder = @"Input PassWorld";
@@ -122,7 +122,7 @@
     
     [_password autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:sepView2];
     [_password autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:sepView2];
-    [_password autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView2 withOffset:10];
+    [_password autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView2 withOffset:fitScreenHeight(8)];
     
     UIView *sepView3 = [[UIView alloc] init];
     sepView3.backgroundColor = UIColorFromRGB(146, 157, 230);
@@ -130,7 +130,7 @@
     
     [sepView3 autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_password];
     [sepView3 autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_password];
-    [sepView3 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_password withOffset:5];
+    [sepView3 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_password withOffset:fitScreenHeight(4)];
     
     _verPwd = [[UITextField alloc]init];
     _verPwd.placeholder = @"Verify Input PassWorld";
@@ -141,7 +141,7 @@
     
     [_verPwd autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:sepView3];
     [_verPwd autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:sepView3];
-    [_verPwd autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView3 withOffset:10];
+    [_verPwd autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView3 withOffset:fitScreenHeight(8)];
     
     UIView *sepView4 = [[UIView alloc] init];
     sepView4.backgroundColor = UIColorFromRGB(146, 157, 230);
@@ -149,7 +149,7 @@
     
     [sepView4 autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_verPwd];
     [sepView4 autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_verPwd];
-    [sepView4 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_verPwd withOffset:5];
+    [sepView4 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_verPwd withOffset:fitScreenHeight(4)];
     
     [@[_password, _username, _email, _verPwd] autoMatchViewsDimension:ALDimensionHeight];
     [@[_password, sepView2, sepView1, sepView3, sepView4, _username, _email, _verPwd] autoMatchViewsDimension:ALDimensionWidth];
@@ -168,20 +168,20 @@
     
     [_signUp autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:sepView4];
     [_signUp autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:sepView4];
-    [_signUp autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView4 withOffset:20];
-    [_signUp autoSetDimension:ALDimensionHeight toSize:55];
+    [_signUp autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:sepView4 withOffset:fitScreenHeight(18)];
+    [_signUp autoSetDimension:ALDimensionHeight toSize:fitScreenHeight(42)];
     
     _dismi = [[UIImageView alloc] init];
     _dismi.image = [UIImage imageNamed:@"dismi"];
     _dismi.clipsToBounds = YES;
     _dismi.userInteractionEnabled = YES;
-    _dismi.layer.cornerRadius = 22;
+    _dismi.layer.cornerRadius = fitScreenWidth(33) / 2;
     [_bgIV addSubview:_dismi];
     
-    [_dismi autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:_bgIV withOffset:15];
-    [_dismi autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_bgIV withOffset:30];
-    [_dismi autoSetDimension:ALDimensionWidth toSize:44];
-    [_dismi autoSetDimension:ALDimensionHeight toSize:44];
+    [_dismi autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:_bgIV withOffset:fitScreenWidth(11)];
+    [_dismi autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_bgIV withOffset:fitScreenHeight(24)];
+    [_dismi autoSetDimension:ALDimensionWidth toSize:fitScreenWidth(33)];
+    [_dismi autoSetDimension:ALDimensionHeight toSize:fitScreenWidth(33)];
 }
 
 - (void)eventAction {

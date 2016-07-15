@@ -22,8 +22,11 @@
 - (void)setDeals:(DealsModel *)deals {
     _headImage.image = [UIImage imageNamed:deals.headImage];
     _titleLbl.text = deals.title;
+    _titleLbl.font = UIFont_mid;
     _detailsTitleLbl.text = deals.detailsTitle;
+    _detailsTitleLbl.font = UIFont_small;
     _priceLbl.text = deals.price;
+    _priceLbl.font = UIFont_big;
 }
 
 @end

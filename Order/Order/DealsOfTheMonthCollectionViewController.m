@@ -54,7 +54,7 @@ static NSString * const reuseIdentifier = @"Cell";
         model3.headImage = @"demo3";
         model3.title = @"Designer's Desk";
         model3.detailsTitle = @"Perfect your home office.";
-        model1.price = @"$324.95";
+        model3.price = @"$324.95";
         _dealsArr = @[model1, model2, model3];
     }
     

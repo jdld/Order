@@ -34,8 +34,16 @@
         model2.commodityName = @"B&O PLAY BeoPlay H8";
         model2.commodityMsg = @"wireless On-Ear Headphones";
         model2.price = @"$499.95";
-        model2.quantity = @"2";
-        _arr = @[model1, model2];
+        model2.quantity = @"1";
+        CurrentOrderModel *model3 = [[CurrentOrderModel alloc] init];
+        model3.headImage = @"Layer22";
+        model3.nickname = @"Lisa Donovan";
+        model3.commodityImage = @"demo5";
+        model3.commodityName = @"B&O PLAY BeoPlay H8";
+        model3.commodityMsg = @"wireless On-Ear Headphones";
+        model3.price = @"$254.25";
+        model3.quantity = @"3";
+        _arr = @[model1, model2, model3];
     }
     return _arr;
 }

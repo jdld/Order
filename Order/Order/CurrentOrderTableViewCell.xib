@@ -73,7 +73,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Over-Ear Headphones - Brown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwr-Sg-XMF">
-                                <rect key="frame" x="85" y="84" width="148" height="12"/>
+                                <rect key="frame" x="85" y="83" width="148" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.70196078429999997" green="0.73725490199999999" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -122,7 +122,7 @@
                             <constraint firstItem="02g-0i-R5E" firstAttribute="leading" secondItem="tpx-Ya-4TV" secondAttribute="trailing" constant="1" id="7nG-NP-yen"/>
                             <constraint firstItem="gwr-Sg-XMF" firstAttribute="leading" secondItem="aWt-KC-WsH" secondAttribute="leading" id="Bpf-hl-o6m"/>
                             <constraint firstItem="hge-fp-hsV" firstAttribute="trailing" secondItem="jgx-wt-SzD" secondAttribute="trailing" id="DNf-iR-LUE"/>
-                            <constraint firstItem="gwr-Sg-XMF" firstAttribute="top" secondItem="aWt-KC-WsH" secondAttribute="bottom" constant="3" id="EPH-qn-428"/>
+                            <constraint firstItem="gwr-Sg-XMF" firstAttribute="top" secondItem="aWt-KC-WsH" secondAttribute="bottom" constant="2" id="EPH-qn-428"/>
                             <constraint firstItem="gpj-wS-6KU" firstAttribute="leading" secondItem="smN-hw-r22" secondAttribute="leading" id="FUy-qe-OMv"/>
                             <constraint firstItem="uyg-MY-Bmh" firstAttribute="centerY" secondItem="02g-0i-R5E" secondAttribute="centerY" id="GFB-en-Wfd"/>
                             <constraint firstAttribute="trailing" secondItem="hge-fp-hsV" secondAttribute="trailing" constant="10" id="Hzj-Mq-ONZ"/>
