@@ -191,7 +191,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Roa-me-iAs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c79-mX-OrK">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
@@ -214,14 +214,6 @@
                                             <constraint firstAttribute="height" constant="1" id="p1U-GX-W5Y"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d9A-CL-teB">
-                                        <rect key="frame" x="20" y="318" width="335" height="150"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Immerse yourself in an emotional experience. The Solo2 has a more dynamic, wider range of sound, with a clarity that will bring you closer to what the artist intended you to hear Immerse yourself in an emotional experience. The Solo2 has a more dynamic, wider range of sound, with a clarity that will bring you closer to what the artist intended you to hear</string>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beats Solo 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1n-87-La6">
                                         <rect key="frame" x="20" y="250" width="91" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -234,19 +226,24 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkq-jS-eO8" customClass="WPHotspotLabel">
+                                        <rect key="frame" x="20" y="318" width="335" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="c79-mX-OrK" secondAttribute="bottom" constant="352" id="26T-EE-86L"/>
-                                    <constraint firstItem="d9A-CL-teB" firstAttribute="top" secondItem="pVy-yH-zvK" secondAttribute="bottom" constant="15" id="2Xx-dC-VUV"/>
+                                    <constraint firstItem="vkq-jS-eO8" firstAttribute="leading" secondItem="Roa-me-iAs" secondAttribute="leading" constant="20" id="AgV-g1-6M5"/>
                                     <constraint firstItem="H1n-87-La6" firstAttribute="top" secondItem="c79-mX-OrK" secondAttribute="bottom" constant="10" id="Huj-dw-8ix"/>
                                     <constraint firstAttribute="trailing" secondItem="7iT-Nj-DfB" secondAttribute="trailing" constant="100" id="ItO-Vd-qIw"/>
                                     <constraint firstItem="c79-mX-OrK" firstAttribute="leading" secondItem="Roa-me-iAs" secondAttribute="leading" id="KNb-Np-dAG"/>
-                                    <constraint firstAttribute="trailing" secondItem="d9A-CL-teB" secondAttribute="trailing" constant="20" id="Ltu-yQ-OQw"/>
+                                    <constraint firstAttribute="trailing" secondItem="vkq-jS-eO8" secondAttribute="trailing" constant="20" id="M2C-lS-Ieg"/>
                                     <constraint firstItem="H1n-87-La6" firstAttribute="leading" secondItem="Roa-me-iAs" secondAttribute="leading" constant="20" id="R7V-Ub-NS8"/>
                                     <constraint firstAttribute="trailing" secondItem="mZr-zw-oij" secondAttribute="trailing" constant="20" id="YWP-CC-KRw"/>
                                     <constraint firstItem="7iT-Nj-DfB" firstAttribute="leading" secondItem="Roa-me-iAs" secondAttribute="leading" constant="20" id="ZTv-eU-bC5"/>
-                                    <constraint firstItem="d9A-CL-teB" firstAttribute="leading" secondItem="Roa-me-iAs" secondAttribute="leading" constant="20" id="cW8-Co-VDY"/>
                                     <constraint firstItem="c79-mX-OrK" firstAttribute="centerX" secondItem="Roa-me-iAs" secondAttribute="centerX" id="cwQ-Ub-fTE"/>
                                     <constraint firstItem="7iT-Nj-DfB" firstAttribute="top" secondItem="H1n-87-La6" secondAttribute="bottom" id="f7k-wl-xw1"/>
                                     <constraint firstItem="pVy-yH-zvK" firstAttribute="top" secondItem="7iT-Nj-DfB" secondAttribute="bottom" constant="20" id="lw1-PL-Aq6"/>
@@ -254,6 +251,7 @@
                                     <constraint firstAttribute="trailing" secondItem="c79-mX-OrK" secondAttribute="trailing" id="tX5-sr-ItR"/>
                                     <constraint firstItem="c79-mX-OrK" firstAttribute="top" secondItem="Roa-me-iAs" secondAttribute="top" id="u7F-u0-8wP"/>
                                     <constraint firstItem="pVy-yH-zvK" firstAttribute="leading" secondItem="Roa-me-iAs" secondAttribute="leading" constant="20" id="vcT-dd-kB1"/>
+                                    <constraint firstItem="vkq-jS-eO8" firstAttribute="top" secondItem="pVy-yH-zvK" secondAttribute="bottom" constant="15" id="wvU-Xi-Z5B"/>
                                     <constraint firstAttribute="trailing" secondItem="pVy-yH-zvK" secondAttribute="trailing" constant="20" id="yoI-ZI-54q"/>
                                 </constraints>
                             </scrollView>
@@ -264,22 +262,11 @@
                                     <constraint firstAttribute="width" secondItem="qe5-QL-gt7" secondAttribute="height" multiplier="1:1" id="INX-W1-fX1"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-cG-xM3">
-                                <rect key="frame" x="20" y="522" width="158" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="DT6-Rs-4aw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="ASK A QUESTION"/>
-                                <connections>
-                                    <action selector="questionAction:forEvent:" destination="6Yv-oT-jim" eventType="touchUpInside" id="9Cd-bn-OFn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13S-ys-ucF">
-                                <rect key="frame" x="198" y="522" width="157" height="50"/>
+                                <rect key="frame" x="198" y="532" width="157" height="40"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.47843137250000001" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="2YI-8B-3Pg"/>
+                                    <constraint firstAttribute="height" constant="40" id="2YI-8B-3Pg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="PURCHASE">
@@ -287,6 +274,17 @@
                                 </state>
                                 <connections>
                                     <action selector="purchaseAction:forEvent:" destination="6Yv-oT-jim" eventType="touchUpInside" id="YSa-0T-xC3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-cG-xM3">
+                                <rect key="frame" x="20" y="532" width="158" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DT6-Rs-4aw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="ASK A QUESTION"/>
+                                <connections>
+                                    <action selector="questionAction:forEvent:" destination="6Yv-oT-jim" eventType="touchUpInside" id="9Cd-bn-OFn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -345,7 +343,7 @@
                         <outlet property="purchaseBut" destination="13S-ys-ucF" id="c0u-60-oe1"/>
                         <outlet property="questionBut" destination="0sl-cG-xM3" id="pCa-l4-10Q"/>
                         <outlet property="scrollView" destination="Roa-me-iAs" id="Bmq-XY-2iy"/>
-                        <outlet property="textView" destination="d9A-CL-teB" id="i96-zU-MF2"/>
+                        <outlet property="textLab" destination="vkq-jS-eO8" id="tLe-KG-gk8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJH-jn-TOM" userLabel="First Responder" sceneMemberID="firstResponder"/>

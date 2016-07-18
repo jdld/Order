@@ -38,6 +38,11 @@
 		B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */; };
 		B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */; };
 		B83B542A1D3C5F6C0014E52D /* ProfileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B54291D3C5F6C0014E52D /* ProfileCollectionViewCell.m */; };
+		B83B54471D3C81FE0014E52D /* WPAttributedStyleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B54421D3C81FE0014E52D /* WPAttributedStyleAction.m */; };
+		B83B54481D3C81FE0014E52D /* WPHotspotLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B54441D3C81FE0014E52D /* WPHotspotLabel.m */; };
+		B83B54491D3C81FE0014E52D /* WPTappableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B54461D3C81FE0014E52D /* WPTappableLabel.m */; };
+		B83B544F1D3C820D0014E52D /* NSMutableString+TagReplace.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B544C1D3C820D0014E52D /* NSMutableString+TagReplace.m */; };
+		B83B54501D3C820D0014E52D /* NSString+WPAttributedMarkup.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B544E1D3C820D0014E52D /* NSString+WPAttributedMarkup.m */; };
 		B8815F501D37571900C633CB /* PaymentDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */; };
 		B8815F531D3775FC00C633CB /* CYXWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F521D3775FC00C633CB /* CYXWaterFlowLayout.m */; };
 		B8906CAE1D386C9D009DDCCE /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8906CAD1D386C9D009DDCCE /* RootTabBarViewController.m */; };
@@ -149,6 +154,16 @@
 		B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		B83B54281D3C5F6C0014E52D /* ProfileCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewCell.h; sourceTree = "<group>"; };
 		B83B54291D3C5F6C0014E52D /* ProfileCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewCell.m; sourceTree = "<group>"; };
+		B83B54411D3C81FE0014E52D /* WPAttributedStyleAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WPAttributedStyleAction.h; path = Extras/WPAttributedStyleAction.h; sourceTree = "<group>"; };
+		B83B54421D3C81FE0014E52D /* WPAttributedStyleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WPAttributedStyleAction.m; path = Extras/WPAttributedStyleAction.m; sourceTree = "<group>"; };
+		B83B54431D3C81FE0014E52D /* WPHotspotLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WPHotspotLabel.h; path = Extras/WPHotspotLabel.h; sourceTree = "<group>"; };
+		B83B54441D3C81FE0014E52D /* WPHotspotLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WPHotspotLabel.m; path = Extras/WPHotspotLabel.m; sourceTree = "<group>"; };
+		B83B54451D3C81FE0014E52D /* WPTappableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WPTappableLabel.h; path = Extras/WPTappableLabel.h; sourceTree = "<group>"; };
+		B83B54461D3C81FE0014E52D /* WPTappableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WPTappableLabel.m; path = Extras/WPTappableLabel.m; sourceTree = "<group>"; };
+		B83B544B1D3C820D0014E52D /* NSMutableString+TagReplace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableString+TagReplace.h"; path = "WPAttributedMarkup/NSMutableString+TagReplace.h"; sourceTree = "<group>"; };
+		B83B544C1D3C820D0014E52D /* NSMutableString+TagReplace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+TagReplace.m"; path = "WPAttributedMarkup/NSMutableString+TagReplace.m"; sourceTree = "<group>"; };
+		B83B544D1D3C820D0014E52D /* NSString+WPAttributedMarkup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+WPAttributedMarkup.h"; path = "WPAttributedMarkup/NSString+WPAttributedMarkup.h"; sourceTree = "<group>"; };
+		B83B544E1D3C820D0014E52D /* NSString+WPAttributedMarkup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+WPAttributedMarkup.m"; path = "WPAttributedMarkup/NSString+WPAttributedMarkup.m"; sourceTree = "<group>"; };
 		B8815F4E1D37571900C633CB /* PaymentDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsTableViewCell.h; sourceTree = "<group>"; };
 		B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsTableViewCell.m; sourceTree = "<group>"; };
 		B8815F511D3775FC00C633CB /* CYXWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXWaterFlowLayout.h; sourceTree = "<group>"; };
@@ -372,6 +387,8 @@
 		B82BE7501D2DE5A000AF7091 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				B83B544A1D3C82060014E52D /* WPAttributedMarkup */,
+				B83B54401D3C81F50014E52D /* Extras */,
 				B81128A91D3872890020726F /* HPGrowingTextView */,
 			);
 			name = 3rd;
@@ -518,6 +535,30 @@
 				B8ED54E41D349BB8006FEA51 /* SearchTableViewCell.m */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		B83B54401D3C81F50014E52D /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				B83B54411D3C81FE0014E52D /* WPAttributedStyleAction.h */,
+				B83B54421D3C81FE0014E52D /* WPAttributedStyleAction.m */,
+				B83B54431D3C81FE0014E52D /* WPHotspotLabel.h */,
+				B83B54441D3C81FE0014E52D /* WPHotspotLabel.m */,
+				B83B54451D3C81FE0014E52D /* WPTappableLabel.h */,
+				B83B54461D3C81FE0014E52D /* WPTappableLabel.m */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
+		B83B544A1D3C82060014E52D /* WPAttributedMarkup */ = {
+			isa = PBXGroup;
+			children = (
+				B83B544B1D3C820D0014E52D /* NSMutableString+TagReplace.h */,
+				B83B544C1D3C820D0014E52D /* NSMutableString+TagReplace.m */,
+				B83B544D1D3C820D0014E52D /* NSString+WPAttributedMarkup.h */,
+				B83B544E1D3C820D0014E52D /* NSString+WPAttributedMarkup.m */,
+			);
+			name = WPAttributedMarkup;
 			sourceTree = "<group>";
 		};
 		B8BBE5131D35D6BC006E7AA8 /* CompleteOrder */ = {
@@ -830,6 +871,7 @@
 				B8C6E3331D34B89B00E31B7F /* MostPopularCollectionViewController.m in Sources */,
 				B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */,
 				B8C6E3271D3489F500E31B7F /* NavigationController.m in Sources */,
+				B83B54491D3C81FE0014E52D /* WPTappableLabel.m in Sources */,
 				B8C6E3301D34B5F100E31B7F /* DealsModel.m in Sources */,
 				B82BE77F1D2DE91E00AF7091 /* StorageMgr.m in Sources */,
 				B8815F501D37571900C633CB /* PaymentDetailsTableViewCell.m in Sources */,
@@ -841,7 +883,10 @@
 				B8BBE5161D35D6F6006E7AA8 /* CompleteOrderViewController.m in Sources */,
 				B82BE71F1D2DE54400AF7091 /* AppDelegate.m in Sources */,
 				B8BBE5221D363816006E7AA8 /* ReviewTableViewCell.m in Sources */,
+				B83B54471D3C81FE0014E52D /* WPAttributedStyleAction.m in Sources */,
+				B83B54501D3C820D0014E52D /* NSString+WPAttributedMarkup.m in Sources */,
 				B8BBE51F1D3619CE006E7AA8 /* PXAutoHeightTextView.m in Sources */,
+				B83B544F1D3C820D0014E52D /* NSMutableString+TagReplace.m in Sources */,
 				B8BBE5121D35CF0A006E7AA8 /* CurrentOrderModel.m in Sources */,
 				B82BE7881D2DF84200AF7091 /* OtherViewController.m in Sources */,
 				B8906CAE1D386C9D009DDCCE /* RootTabBarViewController.m in Sources */,
@@ -858,6 +903,7 @@
 				B8C6E33D1D34BE9700E31B7F /* MostPopularCollectionViewCell.m in Sources */,
 				B8C6E34B1D34E93900E31B7F /* HistoryTableViewController.m in Sources */,
 				B8A9AAF71D3625E400FFF520 /* FollowingTableViewCell.m in Sources */,
+				B83B54481D3C81FE0014E52D /* WPHotspotLabel.m in Sources */,
 				B82BE79A1D2E58E600AF7091 /* FeaturedViewController.m in Sources */,
 				B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */,
 				B82BE76D1D2DE75900AF7091 /* TagsViewController.m in Sources */,

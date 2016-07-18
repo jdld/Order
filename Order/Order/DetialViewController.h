@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WPHotspotLabel;
 
 @interface DetialViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *questionBut;
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *detialLab;
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet WPHotspotLabel *textLab;
 
 @property (strong, nonatomic) NSDictionary *dict;
 

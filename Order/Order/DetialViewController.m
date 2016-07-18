@@ -8,6 +8,9 @@
 
 #import "DetialViewController.h"
 #import "AskQuestionViewController.h"
+#import "WPAttributedMarkup/NSString+WPAttributedMarkup.h"
+#import "Extras/WPAttributedStyleAction.h"
+#import "Extras/WPHotspotLabel.h"
 #import <SDCycleScrollView/SDCycleScrollView.h>
 
 @interface DetialViewController (){
@@ -62,11 +65,49 @@
     imageArr = @[image1,image2,image3];
     [self createSDCycleScrollView];
     
+    NSString *str = @"Immerse yourself in an emotional experience. The Solo2 has a more dynamic, wider range of sound, with a clarity that will bring you closer to what the artist intended you to hear Immerse yourself in an emotional experience. The Solo2 has a more dynamic, wider range of sound, with a clarity that will bring you closer to what the artist intended you to hear";
+    [self createAttributedActionLab:str];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     _scrollView.contentSize = CGSizeMake(UI_SCREEN_W, 320 + [Utilities stringHeight:_textView.text width:UI_SCREEN_W -  50 forfontSize:14] + [Utilities stringHeight:_detialLab.text width:UI_SCREEN_W - 120 forfontSize:10]);
+}
+
+- (void)createAttributedActionLab:(NSString *)labStr {
+    
+    NSDictionary* style = @{@"body":[UIFont fontWithName:@"HelveticaNeue" size:14.0]};
+    NSDictionary* style3 = @{@"body":[UIFont fontWithName:@"HelveticaNeue" size:14.0],
+                             @"help":[WPAttributedStyleAction styledActionWithAction:^{
+                                 NSLog(@"See More");
+                                 _textLab.attributedText = [labStr attributedStringWithStyleBook:style];
+                                 _scrollView.contentSize = CGSizeMake(UI_SCREEN_W, 320 + [Utilities stringHeight:_textLab.text width:UI_SCREEN_W -  50 forfontSize:14] + [Utilities stringHeight:_detialLab.text width:UI_SCREEN_W - 120 forfontSize:10]);
+                             }],
+                             @"link": [UIColor blueColor]};
+    
+    if (iPhone6Plus_6sPlus) {
+        if ([labStr length] < 601) {
+            _textLab.attributedText = [labStr attributedStringWithStyleBook:style];
+        }else {
+           [self setTextLabValue:labStr Index:600 style:style3];
+        }
+    }else if (iPhone6_6s){
+        if ([labStr length] < 301) {
+            _textLab.attributedText = [labStr attributedStringWithStyleBook:style];
+        }else {
+           [self setTextLabValue:labStr Index:300 style:style3];
+        }
+    }else if (iPhone5SE){
+        [self setTextLabValue:labStr Index:60 style:style3];
+    }else {
+        [self setTextLabValue:labStr Index:30 style:style3];
+    }
+}
+
+- (void)setTextLabValue:(NSString *)labStr Index:(int)index style:(NSDictionary *)style{
+    NSString *subStr = [labStr substringToIndex:index];
+    _textLab.attributedText = [ [NSString stringWithFormat:@"%@... <help>See More</help>",subStr] attributedStringWithStyleBook:style];
 }
 
 - (void)createSDCycleScrollView {
