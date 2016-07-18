@@ -37,6 +37,7 @@
 		B82BE79D1D2E58F100AF7091 /* SellersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE79C1D2E58F100AF7091 /* SellersViewController.m */; };
 		B82BE7A01D2E58FE00AF7091 /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */; };
 		B82BE7A41D2E5A5700AF7091 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */; };
+		B83B542A1D3C5F6C0014E52D /* ProfileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B54291D3C5F6C0014E52D /* ProfileCollectionViewCell.m */; };
 		B8815F501D37571900C633CB /* PaymentDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */; };
 		B8815F531D3775FC00C633CB /* CYXWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B8815F521D3775FC00C633CB /* CYXWaterFlowLayout.m */; };
 		B8906CAE1D386C9D009DDCCE /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8906CAD1D386C9D009DDCCE /* RootTabBarViewController.m */; };
@@ -146,6 +147,8 @@
 		B82BE79F1D2E58FE00AF7091 /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
 		B82BE7A21D2E5A5700AF7091 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		B82BE7A31D2E5A5700AF7091 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		B83B54281D3C5F6C0014E52D /* ProfileCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewCell.h; sourceTree = "<group>"; };
+		B83B54291D3C5F6C0014E52D /* ProfileCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewCell.m; sourceTree = "<group>"; };
 		B8815F4E1D37571900C633CB /* PaymentDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsTableViewCell.h; sourceTree = "<group>"; };
 		B8815F4F1D37571900C633CB /* PaymentDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsTableViewCell.m; sourceTree = "<group>"; };
 		B8815F511D3775FC00C633CB /* CYXWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYXWaterFlowLayout.h; sourceTree = "<group>"; };
@@ -446,6 +449,8 @@
 			children = (
 				B82BE76F1D2DE76F00AF7091 /* ProfileViewController.h */,
 				B82BE7701D2DE76F00AF7091 /* ProfileViewController.m */,
+				B83B54281D3C5F6C0014E52D /* ProfileCollectionViewCell.h */,
+				B83B54291D3C5F6C0014E52D /* ProfileCollectionViewCell.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83B542A1D3C5F6C0014E52D /* ProfileCollectionViewCell.m in Sources */,
 				B82BE7971D2E58D400AF7091 /* PopularViewController.m in Sources */,
 				B8A9AAF11D3622B000FFF520 /* FeaturedTableViewCell.m in Sources */,
 				B8C6E3331D34B89B00E31B7F /* MostPopularCollectionViewController.m in Sources */,
