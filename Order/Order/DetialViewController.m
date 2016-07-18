@@ -52,7 +52,14 @@
     
     _check = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"checkmark"]];
     _check.contentMode = UIViewContentModeScaleAspectFit;
-    _check.frame = CGRectMake(size.width/2 - 12, size.height/2 - 10, 24, 20);
+    if(iPhone6Plus_6sPlus){
+        _check.frame = CGRectMake(size.width/2 - 10, size.height/2 - 8, 24, 20);
+    }else if(iPhone6_6s){
+        _check.frame = CGRectMake(size.width/2 - 12, size.height/2 - 10, 24, 20);
+    }else{
+        _check.frame = CGRectMake(size.width/2 - 18, size.height/2 - 15, 24, 20);
+    }
+    
     [_color5 addSubview:_check];
     
     _nameLab.text = _dict[@"name"];
