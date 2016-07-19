@@ -78,7 +78,6 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MostPopularCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
-    
     // Do any additional setup after loading the view.
 }
 
@@ -106,13 +105,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 //{
-//    DealsModel *model = self.dealsArr[indexPath.row];
-//    CGFloat titleHeight = [Utilities stringHeight:model.title width:UI_SCREEN_W - 60 forfontSize:16];
-//    CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:UI_SCREEN_W - 60 forfontSize:12];
-//    CGFloat height = titleHeight + detailsHeight + 257;
-//    return CGSizeMake((UI_SCREEN_W - 30) / 2, height);
+////    DealsModel *model = self.dealsArr[indexPath.row];
+////    CGFloat titleHeight = [Utilities stringHeight:model.title width:UI_SCREEN_W - 60 forfontSize:16];
+////    CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:UI_SCREEN_W - 60 forfontSize:12];
+////    CGFloat height = titleHeight + detailsHeight + 257;
+//    
+//    return size;
 //}
-//
+
 #pragma mark <UICollectionViewDelegate>
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -133,6 +133,7 @@ static NSString * const reuseIdentifier = @"Cell";
     CGFloat titleHeight = [Utilities stringHeight:model.title width:itemWidth - 36 forfontSize:16];
     CGFloat detailsHeight = [Utilities stringHeight:model.detailsTitle width:itemWidth - 50 forfontSize:12];
     CGFloat height = titleHeight + detailsHeight + 258;
+    
     return height;
 }
 
