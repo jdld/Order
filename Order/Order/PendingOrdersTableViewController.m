@@ -10,6 +10,7 @@
 #import "CurrentOrderTableViewCell.h"
 #import "CurrentOrderModel.h"
 #import "CompleteOrderViewController.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 @interface PendingOrdersTableViewController ()
 @property (strong, nonatomic) NSArray *arr;
@@ -68,13 +69,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 152;
+    return [self.tableView fd_heightForCellWithIdentifier:@"Cell" cacheByIndexPath:indexPath configuration:^(CurrentOrderTableViewCell *cell) {
+        cell.currentOrder = self.arr[indexPath.row];
+    }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CurrentOrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.currentOrder = [self arr][indexPath.row];
+    cell.currentOrder = self.arr[indexPath.row];
     cell.contantView.layer.masksToBounds = NO;
     cell.contantView.layer.shadowOffset = CGSizeMake(0, 1);
     cell.contantView.layer.shadowOpacity = 0.2f;
