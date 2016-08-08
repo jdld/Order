@@ -99,6 +99,7 @@
     _password.lx_placeholderColor = [UIColor whiteColor];
     _password.backgroundColor = [UIColor clearColor];
     _password.textColor = [UIColor whiteColor];
+    _password.secureTextEntry = YES;
     [_bgIV addSubview:_password];
     
     [_password autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:sepView1];
